@@ -61,7 +61,7 @@ cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
 set history=500
 
 " Set 5 lines to the cursor - when moving vertically using j/k
-set so=5
+set so=3
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -90,3 +90,15 @@ set display+=lastline
 
 " Always show the status line
 set laststatus=2
+
+" Let j/k behave like other editors (if a line is split, don't skip
+" to the next line)
+" Only have it work in normal mode!
+nmap j gj
+nmap k gk
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
