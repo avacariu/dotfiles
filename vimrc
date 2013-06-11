@@ -39,8 +39,6 @@ endif
 
 " VHDL files created by DesignWorks
 autocmd BufRead,BufNewFile *.dwv set filetype=vhdl
-" Puppet manifest files can use Ruby syntax
-autocmd BufRead,BufNewFile *.pp set filetype=ruby
 
 colorscheme wombat
 
