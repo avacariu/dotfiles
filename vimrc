@@ -1,4 +1,4 @@
-set nocompatible
+set nocompatible  " Needed for pathogen to work
 call pathogen#infect()
 
 set nopaste
