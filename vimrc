@@ -42,6 +42,7 @@ autocmd BufRead,BufNewFile *.dwv set filetype=vhdl
 
 colorscheme wombat
 
+" set number of colors to 256 so CSApprox will work
 let &t_Co=256
 
 set bs=2
@@ -75,11 +76,6 @@ set incsearch
 " Use <C-L> to clear highlighting of :set hlsearch
 if maparg('<C-L>', 'n') ==# ''
     nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
-
-" Allow color schemes do bright colors without forcing bold
-if &t_Co == 8 && $TERM !~# '^linux'
-    set t_Co=16
 endif
 
 " Make Y consistent with C and D. See :help Y.
