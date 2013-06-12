@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='D:/Documents/Computers/Programming/Projects/servokey/application/static'
-let g:netrw_dirhist_2='D:/Documents/School/SFU/CMPT 275/project website/js'
-let g:netrw_dirhist_3='/home/vlad/Desktop/microblog-0.7/app'
-let g:netrw_dirhist_4='/home/vlad/.vim'
-let g:netrw_dirhist_5='/home/vlad/.vim/colors'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/avacariu/acdid'
+let g:netrw_dirhist_2='/home/avacariu/acdid/acdiddeploy'
+let g:netrw_dirhist_3='/home/avacariu/acdid/acdiddeploy/manifests'
+let g:netrw_dirhist_4='/home/avacariu/acdid'
+let g:netrw_dirhist_5='/home/avacariu/acdid/acdiddeploy'
+let g:netrw_dirhist_6='/home/avacariu/acdid/acdiddeploy/manifests'

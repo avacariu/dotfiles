@@ -1,3 +1,6 @@
+set nocompatible
+call pathogen#infect()
+
 set nopaste
 
 " Use spaces instead of tabs
