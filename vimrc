@@ -68,7 +68,7 @@ set history=500
 set so=3
 
 " Ignore compiled files
-set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc,*.class
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
