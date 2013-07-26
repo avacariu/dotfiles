@@ -102,3 +102,8 @@ nmap k gk
 "map <C-k> <C-W>k
 "map <C-h> <C-W>h
 "map <C-l> <C-W>l
+
+" shortcut to cd to the current file's dir
+" Might be nicer to make a cmap, though
+" cmap cd %:h<CR>
+command Cdh silent cd %:h
