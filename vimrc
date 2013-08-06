@@ -110,4 +110,4 @@ command Cdh silent cd %:h
 
 " Shortcut to clear search highlights
 " Chosen because this is gedit's default
-map <C-S-k> :nohls<CR>
+map <C-k> :nohls<CR>
