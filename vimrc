@@ -111,3 +111,7 @@ command Cdh silent cd %:h
 " Shortcut to clear search highlights
 " Chosen because this is gedit's default
 map <C-k> :nohls<CR>
+
+" HTML indent levels because it seems that Vim will load ftplugin/html.vim
+" even when ft=php
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2
