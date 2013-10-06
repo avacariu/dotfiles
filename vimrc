@@ -43,6 +43,12 @@ endif
 " VHDL files created by DesignWorks
 autocmd BufRead,BufNewFile *.dwv set filetype=vhdl
 
+" twig templates are pretty much html
+autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
+
+" .md is both modula-2 and Markdown. The latter is more common.
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
 colorscheme wombat
 
 " set number of colors to 256 so CSApprox will work
