@@ -117,3 +117,18 @@ if ! shopt -oq posix; then
 fi
 
 #[[ $- = *i* ]] && bind TAB:menu-complete
+
+
+function bd () {
+
+  OLDPWD=`pwd`
+  NEWPWD=`echo $OLDPWD | sed 's|\(.*/'$1'[^/]*/\).*|\1|'`
+  index=`echo $NEWPWD | awk '{ print index($1,"/'$1'"); }'`
+  if [ $index -eq 0 ] ; then
+    echo "No such occurrence."
+  else
+    echo $NEWPWD
+    cd "$NEWPWD"
+  fi
+
+}
