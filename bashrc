@@ -120,7 +120,6 @@ fi
 
 
 function bd () {
-
   OLDPWD=`pwd`
   NEWPWD=`echo $OLDPWD | sed 's|\(.*/'$1'[^/]*/\).*|\1|'`
   index=`echo $NEWPWD | awk '{ print index($1,"/'$1'"); }'`
@@ -130,5 +129,4 @@ function bd () {
     echo $NEWPWD
     cd "$NEWPWD"
   fi
-
 }

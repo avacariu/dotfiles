@@ -121,3 +121,10 @@ map <C-k> :nohls<CR>
 " HTML indent levels because it seems that Vim will load ftplugin/html.vim
 " even when ft=php
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2
+autocmd FileType htmldjango setlocal shiftwidth=2 softtabstop=2
+
+" Use 80 columns as the limit for the width of text
+set textwidth=80
+
+" Disable automatic text wrapping
+set formatoptions-=t
