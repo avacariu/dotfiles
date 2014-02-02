@@ -48,6 +48,10 @@ autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
 
 " .md is both modula-2 and Markdown. The latter is more common.
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufRead,BufNewFile *.md set spell
+
+" Spellcheck LaTeX documents
+autocmd BufRead,BufNewFile *.tex set spell
 
 colorscheme wombat
 
