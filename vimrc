@@ -127,8 +127,9 @@ map <C-k> :nohls<CR>
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 softtabstop=2
 
-" Use 80 columns as the limit for the width of text
-set textwidth=80
+" Use 79 columns as the limit for the width of text
+" You can use `gq' to realign text.
+set textwidth=79
 
 " Disable automatic text wrapping
 set formatoptions-=t
