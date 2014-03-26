@@ -50,8 +50,9 @@ autocmd BufRead,BufNewFile *.twig set filetype=htmldjango
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md set spell
 
-" Spellcheck LaTeX documents
+" Spellcheck documents
 autocmd BufRead,BufNewFile *.tex set spell
+autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
 
 colorscheme wombat
 
