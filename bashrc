@@ -130,3 +130,5 @@ function bd () {
     cd "$NEWPWD"
   fi
 }
+
+alias cd..="cd .."
