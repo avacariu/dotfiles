@@ -1,0 +1,9 @@
+[push]
+	default = simple
+[user]
+	email = andrei@avacariu.me
+	name = Andrei Vacariu
+[core]
+	filemode = false
+[merge]
+	conflictstyle = diff3
