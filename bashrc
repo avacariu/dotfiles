@@ -116,19 +116,24 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#[[ $- = *i* ]] && bind TAB:menu-complete
+bd() {
+    if [[ $1 == "" ]]; then
+        newdir=/
+    else
+        local newdir=$(dirname $(pwd))
+    fi
 
+    while [[ "$(basename $newdir)" != *$1* ]] && [[ "$(basename $newdir)" != "/" ]]
+    do
+        newdir=$(dirname $newdir)
+    done
 
-function bd () {
-  OLDPWD=`pwd`
-  NEWPWD=`echo $OLDPWD | sed 's|\(.*/'$1'[^/]*/\).*|\1|'`
-  index=`echo $NEWPWD | awk '{ print index($1,"/'$1'"); }'`
-  if [ $index -eq 0 ] ; then
-    echo "No such occurrence."
-  else
-    echo $NEWPWD
-    cd "$NEWPWD"
-  fi
+    if [[ $newdir == "/" ]]; then
+        echo "No directory containing '$1' found."
+    else
+        echo $newdir
+        cd $newdir
+    fi
 }
 
 alias cd..="cd .."
