@@ -2,7 +2,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc vim"
+files="bashrc vimrc vim gitconfig"
 
 echo "Creating $olddir to backup any existing dotfiles in -"
 mkdir -p $olddir
