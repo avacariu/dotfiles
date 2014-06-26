@@ -7,3 +7,5 @@
 	filemode = false
 [merge]
 	conflictstyle = diff3
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
