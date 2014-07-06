@@ -134,3 +134,6 @@ set textwidth=79
 
 " Disable automatic text wrapping
 set formatoptions-=t
+
+" set gundo to use F5
+nnoremap <F5> :GundoToggle<CR>
