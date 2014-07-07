@@ -137,3 +137,5 @@ set formatoptions-=t
 
 " set gundo to use F5
 nnoremap <F5> :GundoToggle<CR>
+
+let g:ycm_autoclose_preview_window_after_completion=1
