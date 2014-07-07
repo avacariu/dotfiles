@@ -9,7 +9,7 @@ set expandtab
 " 1 tab == 4 spaces
 set shiftwidth=4  " Used when indenting with << or >>
 set tabstop=4     " How many columns a tab counts for
-set softtabstop=4 " How many columns vim uses when you 
+set softtabstop=4 " How many columns vim uses when you
                   " hit tab in insert mode.
 
 set wildmenu
@@ -54,7 +54,12 @@ autocmd BufRead,BufNewFile *.md set spell
 autocmd BufRead,BufNewFile *.tex set spell
 autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
 
-colorscheme wombat
+if !has("gui_running")
+    let g:CSApprox_loaded=1
+    colorscheme wombat-term
+else
+    colorscheme wombat
+endif
 
 " set number of colors to 256 so CSApprox will work
 let &t_Co=256
