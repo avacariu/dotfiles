@@ -24,3 +24,15 @@ Setting it up
         sudo apt-get install libgnome-keyring-dev
         cd /usr/share/doc/git/contrib/credential/gnome-keyring
         sudo make
+
+Common commands I forget
+========================
+
+Byobu
+-----
+
+* Resize window: `ALT-SHIFT-<ARROW>`
+* Escape sequence: `CTRL-b`
+* Vertical split: `CTRL-F2`
+* Horizontal split: `SHIFT-F2`
+* Switch between panes: `SHIFT-<ARROW>`
