@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dir=~/dotfiles
-olddir=~/dotfiles_old
+olddir=~/dotfiles.bak
 files="bashrc vimrc vim gitconfig byobu irssi"
 
 echo "Creating $olddir to backup any existing dotfiles in -"
@@ -15,7 +15,7 @@ echo "...done"
 for file in $files; do
 	echo "Moving any existing dotfiles from - to $olddir"
     if [ -a ~/.$file ]; then
-        mv ~/.$file ~/dotfiles.bak/
+        mv ~/.$file $olddir/
     fi
 	echo "Creating symlink to $file in home directory."
 	ln -s $dir/$file ~/.$file
