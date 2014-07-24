@@ -36,3 +36,4 @@ Byobu
 * Vertical split: `CTRL-F2`
 * Horizontal split: `SHIFT-F2`
 * Switch between panes: `SHIFT-<ARROW>`
+* Close window: `CTRL-F6`
