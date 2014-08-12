@@ -141,4 +141,4 @@ alias cd..="cd .."
 export PATH=~/.local/bin:$PATH
 
 # will fail if pythonpy is not installed
-source .local/venvs/pythonpy/bash_completion.d/pycompletion.sh
+source ~/.local/venvs/pythonpy/bash_completion.d/pycompletion.sh
