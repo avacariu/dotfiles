@@ -137,3 +137,5 @@ bd() {
 }
 
 alias cd..="cd .."
+
+export PATH=~/.local/bin:$PATH
