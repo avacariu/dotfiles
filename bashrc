@@ -117,14 +117,14 @@ if ! shopt -oq posix; then
 fi
 
 bd() {
-    if [[ $1 == "" ]]; then
-        newdir=/
+    if [[ -z $1 ]]; then
+        cd /
+        return
     else
         local newdir=$(dirname $(pwd))
     fi
 
-    while [[ "$(basename $newdir)" != *$1* ]] && [[ "$(basename $newdir)" != "/" ]]
-    do
+    while [[ "$(basename $newdir)" != *$1* ]] && [[ "$(basename $newdir)" != "/" ]]; do
         newdir=$(dirname $newdir)
     done
 
