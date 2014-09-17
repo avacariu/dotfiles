@@ -19,6 +19,7 @@ set hlsearch
 
 if has("gui_gtk2")
     set guifont=Ubuntu\ Mono\ 12
+    set guioptions-=T
 elseif has("gui_macvim")
     set guifont=Consolas:h12
 elseif has("gui_win32")
