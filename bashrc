@@ -138,6 +138,7 @@ bd() {
 
 alias cd..="cd .."
 alias psg="ps aux | grep"
+alias rst="echo -e '\0033\0143'"
 
 export PATH=~/.local/bin:$PATH
 
