@@ -144,3 +144,4 @@ export PATH=~/.local/bin:$PATH
 
 # will fail if pythonpy is not installed
 source ~/.local/venvs/pythonpy/bash_completion.d/pycompletion.sh 2> /dev/null
+source ~/.local/bin/bashmarks.sh

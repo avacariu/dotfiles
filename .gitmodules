@@ -55,3 +55,6 @@
 [submodule "vim/bundle/rust.vim"]
 	path = vim/bundle/rust.vim
 	url = https://github.com/wting/rust.vim.git
+[submodule "local/bin/bashmarks"]
+	path = local/bin/bashmarks
+	url = git@github.com:huyng/bashmarks.git
