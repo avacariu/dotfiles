@@ -58,3 +58,6 @@
 [submodule "local/bin/bashmarks"]
 	path = local/bin/bashmarks
 	url = git@github.com:huyng/bashmarks.git
+[submodule "vim/bundle/vim-localrc"]
+	path = vim/bundle/vim-localrc
+	url = https://github.com/thinca/vim-localrc.git
