@@ -61,3 +61,6 @@
 [submodule "vim/bundle/vim-localrc"]
 	path = vim/bundle/vim-localrc
 	url = https://github.com/thinca/vim-localrc.git
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
