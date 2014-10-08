@@ -1,21 +1,21 @@
-servers = (
-    {
-        address = "irc.freenode.net";
-        chatnet = "Freenode";
-        port = "6667";
-        use_ssl = "no";
-        ssl_verify = "no";
-        autoconnect = "yes";
-    }
-);
-
-chatnets = {
-    Freenode = {
-        type = "IRC";
-        nick = "vlad003";
-        # autosendcmd = "/msg NickServ identify <PASS> ;wait 2000";
-    };
-};
+#servers = (
+#  {
+#    address = "irc.freenode.net";
+#    chatnet = "Freenode";
+#    port = "6667";
+#    use_ssl = "no";
+#    ssl_verify = "no";
+#    autoconnect = "yes";
+#  }
+#);
+#
+#chatnets = {
+#  Freenode = {
+#    type = "IRC";
+#    nick = "vlad003";
+#    # autosendcmd = "/msg NickServ identify <PASS> ;wait 2000";
+#  };
+#};
 
 aliases = {
   J = "join";
@@ -116,7 +116,7 @@ statusbar = {
       # number
       position = "1";
       # active, inactive, always
-      visible = "active";
+      visible = "inactive";
 
       # list of items in statusbar in the display order
       items = {
@@ -126,7 +126,6 @@ statusbar = {
         window = { };
         window_empty = { };
         lag = { priority = "-1"; };
-        act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
       };
@@ -176,6 +175,13 @@ statusbar = {
         topicbarend = { priority = "100"; alignment = "right"; };
       };
     };
+    awl_0 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
 
@@ -187,4 +193,10 @@ settings = {
     nick = "vlad003";
   };
   "fe-text" = { actlist_sort = "refnum"; };
+  "perl/core/scripts" = { awl_shared_sbar = "OFF"; awl_viewer = "no"; };
+  "fe-common/core" = {
+    theme = "solarized-universal";
+    hilight_color = "black";
+  };
 };
+logs = { };
