@@ -139,6 +139,7 @@ bd() {
 alias cd..="cd .."
 alias psg="ps aux | grep"
 alias ris="tput reset"
+alias cdh="cd $(pwd)"
 
 export PATH=~/.local/bin:$PATH
 
