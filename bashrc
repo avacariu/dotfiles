@@ -141,6 +141,10 @@ alias psg="ps aux | grep"
 alias ris="tput reset"
 alias cdh="cd $(pwd)"
 
+# git shortcuts
+alias ga="git add"
+alias gau="git add -u"
+
 export PATH=~/.local/bin:$PATH
 
 # will fail if pythonpy is not installed
