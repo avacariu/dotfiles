@@ -155,5 +155,8 @@ inoremap <S-Tab> <C-V><Tab>
 map <Leader>ge :windo e!<CR>
 
 " switch buffers with Tab and S-Tab
-:nnoremap <Tab> :bnext<CR>
-:nnoremap <S-Tab> :bprevious<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
+" allows hiding modified buffers (useful for using Tab to switch buffers)
+set hidden
