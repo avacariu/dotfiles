@@ -160,3 +160,5 @@ nnoremap <S-Tab> :bprevious<CR>
 
 " allows hiding modified buffers (useful for using Tab to switch buffers)
 set hidden
+
+let g:airline_powerline_fonts = 1
