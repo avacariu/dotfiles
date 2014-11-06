@@ -157,9 +157,6 @@ nnoremap <F5> :GundoToggle<CR>
 
 let g:ycm_autoclose_preview_window_after_completion=1
 
-" Use Shift-Tab to insert a real tab character
-inoremap <S-Tab> <C-V><Tab>
-
 " edit all buffers using current files (reload)
 map <Leader>ge :windo e!<CR>
 
