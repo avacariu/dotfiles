@@ -3,4 +3,10 @@
 *~
 .netrwhist
 .VimballRecord
+
 byobu/.ssh-agent
+
+irssi/away.log
+irssi/config.autosave
+irssi/saved_colors
+irssi/_windowlist
