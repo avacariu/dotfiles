@@ -171,3 +171,5 @@ nnoremap <S-Tab> :bprevious<CR>
 set hidden
 
 let g:airline_powerline_fonts = 1
+
+nmap <Leader>e :NERDTreeToggle<CR>
