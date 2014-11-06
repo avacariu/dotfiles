@@ -17,14 +17,23 @@ set wildmenu
 " Highlight all search results
 set hlsearch
 
-if has("gui_gtk2")
-    set guifont=Ubuntu\ Mono\ 12
-    set guioptions-=T
-elseif has("gui_macvim")
-    set guifont=Consolas:h12
-elseif has("gui_win32")
-    set guifont=Consolas:h11
-end
+if has("gui_running")
+    if has("gui_gtk2")
+        set guifont=Ubuntu\ Mono\ 12
+        set guioptions-=T
+
+        " the powerline font is partially messed up in gvim
+        if !exists('g:airline_symbols')
+            let g:airline_symbols = {}
+        endif
+        let g:airline_symbols.space = "\u3000"
+
+    elseif has("gui_macvim")
+        set guifont=Consolas:h12
+    elseif has("gui_win32")
+        set guifont=Consolas:h11
+    endif
+endif
 
 set nu
 
