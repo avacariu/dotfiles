@@ -173,3 +173,8 @@ nmap <Leader>e :NERDTreeToggle<CR>
 
 " Use SS in visual mode to add spaces around selection
 vmap SS s<Space><Space><Esc>P
+
+" Disable YCM on some of my machines
+if hostname() =~ '\(huckleberry\|do\)'
+    let g:loaded_youcompleteme = 1
+endif
