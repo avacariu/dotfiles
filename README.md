@@ -11,7 +11,8 @@ Setting it up
 
         git clone --recursive
 
-* If you forgot the --recursive
+* If you forgot the --recursive (or if you just did a git pull and got new
+  submodules, but need to update them)
 
         git submodule update --init
 
@@ -37,3 +38,9 @@ Byobu
 * Horizontal split: `SHIFT-F2`
 * Switch between panes: `SHIFT-<ARROW>`
 * Close window: `CTRL-F6`
+
+Updating YouCompleteMe
+======================
+
+    git submodule update --init --recursive
+    ./install.sh --clang-completer --system-libclang
