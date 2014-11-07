@@ -171,6 +171,8 @@ let g:airline_powerline_fonts = 1
 
 nmap <Leader>e :NERDTreeToggle<CR>
 
+nnoremap <Leader>q :q<CR>
+
 " Use SS in visual mode to add spaces around selection
 vmap SS s<Space><Space><Esc>P
 
@@ -178,3 +180,4 @@ vmap SS s<Space><Space><Esc>P
 if hostname() =~ '\(huckleberry\|do\)'
     let g:loaded_youcompleteme = 1
 endif
+
