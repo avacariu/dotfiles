@@ -170,3 +170,6 @@ set hidden
 let g:airline_powerline_fonts = 1
 
 nmap <Leader>e :NERDTreeToggle<CR>
+
+" Use SS in visual mode to add spaces around selection
+vmap SS s<Space><Space><Esc>P
