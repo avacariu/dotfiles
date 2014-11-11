@@ -64,7 +64,11 @@ autocmd BufRead,BufNewFile *.md set autoindent
 
 " Spellcheck documents
 autocmd BufRead,BufNewFile *.tex set spell
-autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
+autocmd BufRead,BufNewFile COMMIT_EDITMSG set spell
+
+let g:tex_flavor='latex'
+let g:ycm_filetype_blacklist={'tex': 1}
+
 
 if !has("gui_running")
     let g:CSApprox_loaded=1
