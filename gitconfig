@@ -19,3 +19,4 @@
     lg = log -p
     who = shortlog -s --
     k = !gitk
+    root = rev-parse --show-toplevel
