@@ -185,3 +185,5 @@ if hostname() =~ '\(huckleberry\|do\)'
     let g:loaded_youcompleteme = 1
 endif
 
+" highlight the current line
+set cursorline
