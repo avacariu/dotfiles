@@ -5,6 +5,8 @@
 .VimballRecord
 
 byobu/.ssh-agent
+byobu/windows
+byobu/windows.tmux
 
 irssi/away.log
 irssi/config.autosave
