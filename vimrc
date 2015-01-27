@@ -20,7 +20,8 @@ set hlsearch
 if has("gui_running")
     if has("gui_gtk2")
         set guifont=Ubuntu\ Mono\ 12
-        set guioptions-=T
+        set guioptions-=T   " toolbar
+        set guioptions-=r   " right scrollbar
 
         " the powerline font is partially messed up in gvim
         if !exists('g:airline_symbols')
