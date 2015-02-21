@@ -81,7 +81,6 @@ endif
 " set number of colors to 256 so CSApprox will work
 let &t_Co=256
 
-set bs=2
 set backspace=indent,eol,start
 
 set confirm
