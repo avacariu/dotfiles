@@ -153,3 +153,5 @@ source ~/.local/bin/bashmarks.sh
 
 bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
+
+. /etc/profile.d/vte.sh
