@@ -181,7 +181,7 @@ nnoremap <Leader>q :q<CR>
 vmap SS s<Space><Space><Esc>P
 
 " Disable YCM on some of my machines
-if hostname() =~ '\(huckleberry\|do\)'
+if hostname() =~ '\(haimo\|do\)'
     let g:loaded_youcompleteme = 1
 endif
 
