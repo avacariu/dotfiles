@@ -27,6 +27,9 @@ mkdir -p ~/.local/bin
 echo "Copying bashmarks to .local/bin"
 cp $dir/local/bin/bashmarks/bashmarks.sh ~/.local/bin/
 
+echo "Copying get-num-updates to .local/bin"
+cp $dir/local/bin/get-num-updates.sh ~/.local/bin/
+
 echo "Setting up powerline fonts"
 cd /tmp
 wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
