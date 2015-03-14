@@ -187,3 +187,6 @@ endif
 
 " highlight the current line
 set cursorline
+
+" use \s for spellcheck
+nnoremap \s a<C-X><C-S>
