@@ -145,6 +145,10 @@ alias cdh='cd $(pwd)'
 alias ga="git add"
 alias gau="git add -u"
 
+# make tmux use 256 color. Unfortunately setting this in .tmux.conf isn't
+# enough
+alias tmux="tmux -2"
+
 export PATH=~/.local/bin:$PATH
 
 # will fail if pythonpy is not installed
