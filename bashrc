@@ -140,6 +140,7 @@ alias cd..="cd .."
 alias psg="ps aux | grep"
 alias ris="tput reset"
 alias cdh='cd $(pwd)'
+alias cd-="cd -"
 
 # git shortcuts
 alias ga="git add"
