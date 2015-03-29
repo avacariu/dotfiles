@@ -1,2 +1,2 @@
 " gradle syntax highlighting
-au BufNewFile,BufRead *.gradle set filetype=groovy"
+au BufNewFile,BufRead *.gradle set filetype=groovy
