@@ -141,6 +141,7 @@ alias psg="ps aux | grep"
 alias ris="tput reset"
 alias cdh='cd $(pwd)'
 alias cd-="cd -"
+alias nt="nautilus ."
 
 # git shortcuts
 alias ga="git add"
