@@ -29,6 +29,8 @@ if has("gui_running")
         endif
         let g:airline_symbols.space = "\u3000"
 
+        set lines=35 columns=85
+
     elseif has("gui_macvim")
         set guifont=Consolas:h12
     elseif has("gui_win32")
