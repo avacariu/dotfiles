@@ -137,6 +137,7 @@ bd() {
 }
 
 alias cd..="cd .."
+alias ..="cd .."
 alias psg="ps aux | grep"
 alias ris="tput reset"
 alias cdh='cd $(pwd)'
