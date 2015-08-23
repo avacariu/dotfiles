@@ -162,3 +162,6 @@ bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
 . /etc/profile.d/vte.sh 2> /dev/null
+
+export DEBFULLNAME="Andrei Vacariu"
+export DEBEMAIL="andrei@avacariu.me"
