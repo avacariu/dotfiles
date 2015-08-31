@@ -143,6 +143,7 @@ alias ris="tput reset"
 alias cdh='cd $(pwd)'
 alias cd-="cd -"
 alias nt="nautilus ."
+alias :e="gvim"
 
 # git shortcuts
 alias ga="git add"
