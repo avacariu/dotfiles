@@ -144,6 +144,7 @@ alias cdh='cd $(pwd)'
 alias cd-="cd -"
 alias nt="nautilus ."
 alias :e="gvim"
+alias ta="tmux attach || tmux new-session"
 
 # git shortcuts
 alias ga="git add"
@@ -166,3 +167,6 @@ bind '"\e[B"':history-search-forward
 
 export DEBFULLNAME="Andrei Vacariu"
 export DEBEMAIL="andrei@avacariu.me"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
