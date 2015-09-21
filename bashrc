@@ -146,6 +146,17 @@ alias nt="nautilus ."
 alias :e="gvim"
 alias ta="tmux attach || tmux new-session"
 
+new() {
+    cp $HOME/Templates/$1 $2
+}
+
+_new-complete() {
+    IFS=$'\n' tmp=( $(compgen -W "$(ls "$HOME/Templates/")" -- "${COMP_WORDS[$COMP_CWORD]}" ))
+    COMPREPLY=( "${tmp[@]// /\ }" )
+}
+
+complete -F _new-complete new
+
 # git shortcuts
 alias ga="git add"
 alias gau="git add -u"
