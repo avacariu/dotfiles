@@ -181,3 +181,10 @@ nnoremap \s a<C-X><C-S>
 
 " user CTRL-V to paste text while in insert mode
 inoremap <C-V> <ESC>"+pa
+
+" Don't add two spaces after . ? and !
+set nojoinspaces
+
+" Use the GNOME system clipboard when yanking and pasting
+" NOTE: unnamed is X11, unnamedplus is GNOME
+set clipboard^=unnamedplus
