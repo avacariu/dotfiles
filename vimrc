@@ -188,3 +188,5 @@ set nojoinspaces
 " Use the GNOME system clipboard when yanking and pasting
 " NOTE: unnamed is X11, unnamedplus is GNOME
 set clipboard^=unnamedplus
+
+set ttyfast
