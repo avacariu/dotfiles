@@ -15,6 +15,8 @@
 \RequirePackage{xspace}
 \RequirePackage{changepage}
 
+\RequirePackage{xparse}
+
 \newif\if@oneperpage\@oneperpagefalse
 \DeclareOption{oneperpage}{
   \@oneperpagetrue
@@ -53,7 +55,7 @@
   \@afterindentfalse\@afterheading
 }
 
-\newcommand{\subquestion}[2][\CurrentQuestion]{%
+\NewDocumentCommand\subquestion{O{\CurrentQuestion}m}{%
   \par
   \medskip
   \noindent{\bfseries #1#2}
