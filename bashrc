@@ -145,6 +145,7 @@ alias cd-="cd -"
 alias nt="nautilus ."
 alias :e="gvim"
 alias ta="tmux attach || tmux new-session"
+alias py3="python3"
 
 new() {
     cp $HOME/Templates/$1 $2
