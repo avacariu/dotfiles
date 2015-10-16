@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{homework}[2015/08/26 Homework Class]
+\ProvidesClass{homework}[2015/09/15 Homework Class]
 
 \LoadClass{report}
 
@@ -55,10 +55,10 @@
   \@afterindentfalse\@afterheading
 }
 
-\NewDocumentCommand\subquestion{O{\CurrentQuestion}m}{%
+\NewDocumentCommand\subquestion{sO{\CurrentQuestion}m}{%
   \par
   \medskip
-  \noindent{\bfseries #1#2}
+  \noindent{\bfseries \IfBooleanTF#1{}{#2}#3}
   \enspace
   \@ifnextchar\par{\@gobble}{}
 }
