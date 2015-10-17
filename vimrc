@@ -190,3 +190,5 @@ set nojoinspaces
 set clipboard^=unnamedplus
 
 set ttyfast
+
+inoremap  ( (<C-O>:call AutoSurround(")")<CR>

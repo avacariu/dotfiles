@@ -80,3 +80,6 @@
 [submodule "vim/bundle/vim-css-color"]
 	path = vim/bundle/vim-css-color
 	url = https://github.com/skammer/vim-css-color.git
+[submodule "vim/bundle/vim-autosurround"]
+	path = vim/bundle/vim-autosurround
+	url = https://github.com/seletskiy/vim-autosurround.git
