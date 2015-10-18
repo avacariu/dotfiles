@@ -191,4 +191,5 @@ set clipboard^=unnamedplus
 
 set ttyfast
 
-inoremap  ( (<C-O>:call AutoSurround(")")<CR>
+" Enable vim-autosurround
+"inoremap  ( (<C-O>:call AutoSurround(")")<CR>
