@@ -75,6 +75,10 @@
 \newcommand{\done}{%
 }
 
+\def\HomeworkHTitle{\@title}
+\def\HomeworkHAuthor{\@author}
+\def\HomeworkHDate{\@date}
+
 \newcommand{\htitle}[1]{%
     \def\HomeworkHTitle{#1}
 }
