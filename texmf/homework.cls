@@ -64,6 +64,7 @@
 }
 
 \newcommand{\solution}{%
+  \par
   \smallskip
   \noindent{\bfseries Solution}
   \nopagebreak
