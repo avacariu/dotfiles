@@ -13,6 +13,7 @@
 \RequirePackage{titling}
 \RequirePackage{xspace}
 \RequirePackage{changepage}
+\RequirePackage{wasysym}
 
 \RequirePackage{xparse}
 
@@ -108,3 +109,5 @@
 \newcommand{\ZnZ}[1][n]{\ensuremath{\mathbb{Z}/#1\mathbb{Z}}}
 \newcommand{\Z}{\ensuremath{\mathbb{Z}}}
 \newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+
+\newcommand{\contradiction}{\ensuremath{\text{\enspace\lightning}}}
