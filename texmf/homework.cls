@@ -8,7 +8,6 @@
 \RequirePackage{commath}
 \RequirePackage{enumitem}
 \RequirePackage{parskip}
-%\RequirePackage{fullpage}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fancyhdr}
 \RequirePackage{titling}
@@ -21,8 +20,16 @@
 \DeclareOption{oneperpage}{
   \@oneperpagetrue
 }
+\newif\if@palatino\@palatinofalse
+\DeclareOption{palatino}{
+    \@palatinotrue
+}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions\relax
+
+\if@palatino
+    \RequirePackage[sc]{mathpazo}
+\fi
 
 % NEVER split at binary and relational operators
 % essentially, don't split math
