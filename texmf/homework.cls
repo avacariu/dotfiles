@@ -63,13 +63,22 @@
   \@afterindentfalse\@afterheading
 }
 
-\NewDocumentCommand\subquestion{sO{\CurrentQuestion}m}{%
+\NewDocumentEnvironment{subquestion}{sO{\CurrentQuestion}m}{%
   \par
   \medskip
-  \noindent{\bfseries \IfBooleanTF#1{}{#2}#3}
-  \enspace
-  \@ifnextchar\par{\@gobble}{}
+  \begin{adjustwidth}{0.5cm}{}
+      \noindent{\bfseries \IfBooleanTF#1{}{#2}#3}
+      \enspace
+      \@ifnextchar\par{\@gobble}{}
+}{
+  \end{adjustwidth}
 }
+
+% make the syntax by \begin{baz*} rather than \begin{baz}*
+\ExplSyntaxOn
+\cs_new:cpn {subquestion*} {\subquestion*}
+\cs_new_eq:cN {endsubquestion*} \endsubquestion
+\ExplSyntaxOff
 
 \newcommand{\solution}{%
   \par
