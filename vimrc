@@ -189,7 +189,20 @@ set nojoinspaces
 " NOTE: unnamed is X11, unnamedplus is GNOME
 set clipboard^=unnamedplus
 
+" Send more characters to the screen for redrawing, instead of using
+" insert/delete line commands
 set ttyfast
+
+" If there are more than 3 lines to scroll, redraw the screen. Good for when
+" redrawing is fast, but scrolling is slow in a terminal.
+set ttyscroll=3
+
+" Don't redraw the screen when executing macros, registers and other commands
+" that have not been typed.
+set lazyredraw
+
+" Don't highlight syntax past this column
+set synmaxcol=128
 
 " Enable vim-autosurround
 "inoremap  ( (<C-O>:call AutoSurround(")")<CR>
