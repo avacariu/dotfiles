@@ -121,3 +121,6 @@
 \newcommand{\Q}{\ensuremath{\mathbb{Q}}}
 
 \newcommand{\contradiction}{\ensuremath{\text{\enspace\lightning}}}
+\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
+\newcommand{\inverse}{\ensuremath{^{-1}}}
+\newcommand{\Ideal}[1]{\ensuremath{\langle #1 \rangle}}
