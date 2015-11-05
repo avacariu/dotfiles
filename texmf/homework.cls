@@ -64,14 +64,15 @@
 }
 
 \NewDocumentEnvironment{subquestion}{sO{\CurrentQuestion}m}{%
-  \par
-  \medskip
-  \begin{adjustwidth}{0.5cm}{}
-      \noindent{\bfseries \IfBooleanTF#1{}{#2}#3}
-      \enspace
-      \@ifnextchar\par{\@gobble}{}
+    \list{}{%
+        \topsep\z@
+        \listparindent\parindent
+        \parsep\parskip
+        \leftmargin=1cm
+    }%
+    \item[{\bfseries \IfBooleanTF#1{}{#2}#3}]
 }{
-  \end{adjustwidth}
+    \endlist
 }
 
 % make the syntax by \begin{baz*} rather than \begin{baz}*
