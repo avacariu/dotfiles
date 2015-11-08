@@ -147,6 +147,10 @@ alias :e="gvim"
 alias ta="tmux attach || tmux new-session"
 alias py3="python3"
 
+mkd() {
+    mkdir $1 && cd $1
+}
+
 new() {
     cp $HOME/Templates/$1 $2
 }
