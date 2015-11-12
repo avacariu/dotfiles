@@ -124,3 +124,4 @@
 \newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
 \newcommand{\inverse}{\ensuremath{^{-1}}}
 \newcommand{\Ideal}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\injectionto}{\ensuremath{\hookrightarrow}}
