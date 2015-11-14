@@ -152,7 +152,9 @@ mkd() {
 }
 
 numfiles() {
-    find $1 -type f | wc -l
+    for dir in "$@"; do
+        /bin/echo -e "$(find "$dir" -type f | wc -l) \t $dir"
+    done
 }
 
 new() {
