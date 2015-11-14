@@ -151,6 +151,10 @@ mkd() {
     mkdir $1 && cd $1
 }
 
+numfiles() {
+    find $1 -type f | wc -l
+}
+
 new() {
     cp $HOME/Templates/$1 $2
 }
