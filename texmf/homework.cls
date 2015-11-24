@@ -15,6 +15,18 @@
 \RequirePackage{changepage}
 \RequirePackage{wasysym}
 
+\RequirePackage{amsthm}
+% this fixes the lack of space above theorem environments because of the use
+% of parskip
+\begingroup
+    \makeatletter
+    \@for\theoremstyle:=definition,remark,plain\do{%
+        \expandafter\g@addto@macro\csname th@\theoremstyle\endcsname{%
+            \addtolength\thm@preskip\parskip
+            }%
+        }
+\endgroup
+
 \RequirePackage{xparse}
 
 \newif\if@oneperpage\@oneperpagefalse
@@ -125,3 +137,5 @@
 \newcommand{\inverse}{\ensuremath{^{-1}}}
 \newcommand{\Ideal}[1]{\ensuremath{\langle #1 \rangle}}
 \newcommand{\injectionto}{\ensuremath{\hookrightarrow}}
+
+\newtheorem*{claim}{Claim}
