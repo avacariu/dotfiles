@@ -146,6 +146,7 @@ alias nt="nautilus ."
 alias :e="gvim"
 alias ta="tmux attach || tmux new-session"
 alias py3="python3"
+alias naut="nautilus"
 
 mkd() {
     mkdir $1 && cd $1
