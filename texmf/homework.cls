@@ -14,6 +14,7 @@
 \RequirePackage{xspace}
 \RequirePackage{changepage}
 \RequirePackage{wasysym}
+\RequirePackage{mathtools}
 
 \RequirePackage{amsthm}
 % this fixes the lack of space above theorem environments because of the use
@@ -139,3 +140,7 @@
 \newcommand{\injectionto}{\ensuremath{\hookrightarrow}}
 
 \newtheorem*{claim}{Claim}
+
+\DeclareMathOperator{\Ima}{im}
+\DeclarePairedDelimiter{\SpanFences}{\{}{\}}
+\newcommand{\Span}{\operatorname{Span}\SpanFences}
