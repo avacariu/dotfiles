@@ -144,3 +144,6 @@
 \DeclareMathOperator{\Ima}{im}
 \DeclarePairedDelimiter{\SpanFences}{\{}{\}}
 \newcommand{\Span}{\operatorname{Span}\SpanFences}
+
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
