@@ -86,3 +86,6 @@
 [submodule "vim/bundle/Smooth-Scroll"]
 	path = vim/bundle/Smooth-Scroll
 	url = https://github.com/vim-scripts/Smooth-Scroll.git
+[submodule "vim/bundle/python-mode"]
+	path = vim/bundle/python-mode
+	url = https://github.com/klen/python-mode.git
