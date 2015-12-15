@@ -142,6 +142,7 @@
 \newtheorem*{claim}{Claim}
 
 \DeclareMathOperator{\Ima}{im}
+\DeclareMathOperator{\Gal}{Gal}
 \DeclarePairedDelimiter{\SpanFences}{\{}{\}}
 \newcommand{\Span}{\operatorname{Span}\SpanFences}
 
