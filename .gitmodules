@@ -92,3 +92,6 @@
 [submodule "vim/bundle/vim-qml"]
 	path = vim/bundle/vim-qml
 	url = https://github.com/peterhoeg/vim-qml.git
+[submodule "vim/bundle/vim-jinja"]
+	path = vim/bundle/vim-jinja
+	url = http://github.com/vlad003/vim-jinja.git
