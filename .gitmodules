@@ -113,3 +113,6 @@
 [submodule "vim/bundle/vim-sleuth"]
 	path = vim/bundle/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
+[submodule "vim/bundle/vim-capslock"]
+	path = vim/bundle/vim-capslock
+	url = https://github.com/tpope/vim-capslock.git
