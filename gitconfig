@@ -3,6 +3,8 @@
 [user]
     email = andrei@avacariu.me
     name = Andrei Vacariu
+[core]
+    editor = vim -c 'startinsert'
 [merge]
     conflictstyle = diff3
 [credential]
