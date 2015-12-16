@@ -24,10 +24,10 @@
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/vim-characterize"]
 	path = vim/bundle/vim-characterize
-	url = git://github.com/tpope/vim-characterize.git
+	url = https://github.com/tpope/vim-characterize.git
 [submodule "vim/bundle/vim-speeddating"]
 	path = vim/bundle/vim-speeddating
-	url = git://github.com/tpope/vim-speeddating.git
+	url = https://github.com/tpope/vim-speeddating.git
 [submodule "vim/bundle/snipMate"]
 	path = vim/bundle/snipMate
 	url = https://github.com/msanders/snipmate.vim.git
@@ -46,7 +46,7 @@
 	url = https://github.com/terryma/vim-multiple-cursors
 [submodule "vim/bundle/gundo.vim"]
 	path = vim/bundle/gundo.vim
-	url = http://github.com/sjl/gundo.vim.git
+	url = https://github.com/sjl/gundo.vim.git
 [submodule "vim/bundle/highlight.vim"]
 	path = vim/bundle/highlight.vim
 	url = https://github.com/vim-scripts/highlight.vim.git
@@ -67,7 +67,7 @@
 	url = https://github.com/bling/vim-airline
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/AutoClose"]
 	path = vim/bundle/AutoClose
 	url = https://github.com/vim-scripts/AutoClose.git
@@ -94,7 +94,7 @@
 	url = https://github.com/peterhoeg/vim-qml.git
 [submodule "vim/bundle/vim-jinja"]
 	path = vim/bundle/vim-jinja
-	url = http://github.com/vlad003/vim-jinja.git
+	url = https://github.com/vlad003/vim-jinja.git
 [submodule "vim/bundle/vim-git"]
 	path = vim/bundle/vim-git
 	url = https://github.com/tpope/vim-git.git
