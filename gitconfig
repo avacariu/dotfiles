@@ -1,14 +1,14 @@
 [push]
-	default = simple
+    default = simple
 [user]
-	email = andrei@avacariu.me
-	name = Andrei Vacariu
+    email = andrei@avacariu.me
+    name = Andrei Vacariu
 [core]
-	filemode = false
+    filemode = false
 [merge]
-	conflictstyle = diff3
+    conflictstyle = diff3
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+    helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
 [alias]
     st = status
     ci = commit
