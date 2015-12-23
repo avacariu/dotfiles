@@ -3,6 +3,10 @@
 FILE=/tmp/NUM_APT_UPDATES_SOME_RANDOM_TEXT
 LOCK=$FILE-lock
 
+if [ ! -x /usr/lib/update-notifier/apt-check ]; then
+    exit
+fi
+
 # first we just want to just return the value we computed before
 if [ -e $FILE ]; then
     cat $FILE
