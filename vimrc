@@ -208,4 +208,7 @@ set synmaxcol=128
 " Enable vim-autosurround
 "inoremap  ( (<C-O>:call AutoSurround(")")<CR>
 
-let g:pymode_rope_completion = 0
+let g:pymode_rope = 0
+let g:pymode_virtualenv = 1
+
+let g:pymode = 0
