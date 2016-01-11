@@ -208,6 +208,9 @@ set synmaxcol=128
 " Enable vim-autosurround
 "inoremap  ( (<C-O>:call AutoSurround(")")<CR>
 
+" Space indents don't work properly with here-docs
+autocmd FileType htmldjango setlocal noexpandtab
+
 let g:pymode_rope = 0
 let g:pymode_virtualenv = 1
 
