@@ -102,10 +102,6 @@
 	path = vim/bundle/vim-toml
 	url = https://github.com/cespare/vim-toml.git
 	ignore = dirty
-[submodule "vim/bundle/vim-css-color"]
-	path = vim/bundle/vim-css-color
-	url = https://github.com/skammer/vim-css-color.git
-	ignore = dirty
 [submodule "vim/bundle/vim-autosurround"]
 	path = vim/bundle/vim-autosurround
 	url = https://github.com/seletskiy/vim-autosurround.git
@@ -157,4 +153,8 @@
 [submodule "vim/bundle/vim-virtualenv"]
 	path = vim/bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
+	ignore = dirty
+[submodule "vim/bundle/Colorizer"]
+	path = vim/bundle/Colorizer
+	url = https://github.com/chrisbra/Colorizer.git
 	ignore = dirty
