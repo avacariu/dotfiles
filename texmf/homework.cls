@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{homework}[2015/09/15 Homework Class]
+\ProvidesClass{homework}[2016/01/15 Homework Class]
 
 \LoadClass{report}
 
@@ -143,6 +143,8 @@
 
 \DeclareMathOperator{\Ima}{im}
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\ord}{ord}
 \DeclarePairedDelimiter{\SpanFences}{\{}{\}}
 \newcommand{\Span}{\operatorname{Span}\SpanFences}
 
