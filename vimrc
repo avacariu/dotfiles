@@ -203,7 +203,7 @@ set ttyscroll=3
 set lazyredraw
 
 " Don't highlight syntax past this column
-set synmaxcol=128
+set synmaxcol=196
 
 " Enable vim-autosurround
 "inoremap  ( (<C-O>:call AutoSurround(")")<CR>
@@ -215,3 +215,7 @@ let g:pymode_rope = 0
 let g:pymode_virtualenv = 1
 
 let g:pymode = 0
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
