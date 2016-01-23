@@ -174,9 +174,6 @@ if hostname() =~ '\(haimo\|do\|80x24\)'
     let g:loaded_youcompleteme = 1
 endif
 
-" highlight the current line
-set cursorline
-
 " use \s for spellcheck
 nnoremap \s a<C-X><C-S>
 
