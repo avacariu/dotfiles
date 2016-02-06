@@ -144,6 +144,7 @@
 \DeclareMathOperator{\Ima}{im}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Inn}{Inn}
 \DeclareMathOperator{\ord}{ord}
 \DeclarePairedDelimiter{\SpanFences}{\{}{\}}
 \newcommand{\Span}{\operatorname{Span}\SpanFences}
