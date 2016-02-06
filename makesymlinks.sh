@@ -30,6 +30,9 @@ cp $dir/local/bin/bashmarks/bashmarks.sh ~/.local/bin/
 echo "Copying get-num-updates to .local/bin"
 cp $dir/local/bin/get-num-updates.sh ~/.local/bin/
 
+echo "Copying get-temp to .local/bin"
+cp $dir/local/bin/get-temp.sh ~/.local/bin/
+
 echo "Setting up powerline fonts"
 cd /tmp
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
