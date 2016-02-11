@@ -162,3 +162,7 @@
 	path = vim/bundle/dockerfile.vim
 	url = https://github.com/vlad003/dockerfile.vim.git
 	ignore = dirty
+[submodule "vim/bundle/vim-bracketed-paste"]
+	path = vim/bundle/vim-bracketed-paste
+	url = https://github.com/ConradIrwin/vim-bracketed-paste.git
+	ignore = dirty
