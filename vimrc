@@ -217,7 +217,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
+" Use mouse for scrolling
 set mouse=a
 nmap <LeftMouse> <nop>
 imap <LeftMouse> <nop>
 vmap <LeftMouse> <nop>
+
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
