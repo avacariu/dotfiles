@@ -1,2 +1,2 @@
-set formatoptions+=t
+setlocal formatoptions+=t
 setlocal spell

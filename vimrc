@@ -146,7 +146,7 @@ set textwidth=79
 set formatoptions-=t
 
 " set gundo to use F5
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <leader>u :GundoToggle<CR>
 
 let g:ycm_autoclose_preview_window_after_completion=1
 
