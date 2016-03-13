@@ -140,6 +140,7 @@
 \newcommand{\injectionto}{\ensuremath{\hookrightarrow}}
 
 \newtheorem*{claim}{Claim}
+\newtheorem*{theorem}{Theorem}
 
 \DeclareMathOperator{\Ima}{im}
 \DeclareMathOperator{\Gal}{Gal}
