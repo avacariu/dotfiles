@@ -14,3 +14,6 @@ irssi/saved_colors
 irssi/_windowlist
 
 tags
+
+# this is neovim's file and it's just a symlink
+vim/init.vim
