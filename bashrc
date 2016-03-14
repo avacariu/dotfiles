@@ -168,6 +168,14 @@ _new-complete() {
     COMPREPLY=( "${tmp[@]// /\ }" )
 }
 
+encrypt() {
+  openssl enc -aes256 -pass pass:"$1" -in "$2" -out "$2".encrypted
+}
+
+decrypt() {
+  openssl enc -d -aes256 -pass pass:"$1" -in "$2" -out "$2".decrypted
+}
+
 complete -F _new-complete new
 
 # git shortcuts
