@@ -51,6 +51,7 @@ syntax enable
 if has("autocmd")
     filetype plugin indent on
 else
+    set autoindent
     set cindent
 endif
 
@@ -224,3 +225,7 @@ imap <LeftMouse> <nop>
 vmap <LeftMouse> <nop>
 
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+" Center the search result
+map N Nzz
+map n nzz
