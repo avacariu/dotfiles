@@ -138,6 +138,7 @@
 \newcommand{\inverse}{\ensuremath{^{-1}}}
 \newcommand{\Ideal}[1]{\ensuremath{\langle #1 \rangle}}
 \newcommand{\injectionto}{\ensuremath{\hookrightarrow}}
+\newcommand{\normalin}{\ensuremath{\triangleleft}}
 
 \newtheorem*{claim}{Claim}
 \newtheorem*{theorem}{Theorem}
