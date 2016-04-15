@@ -142,6 +142,7 @@
 
 \newtheorem*{claim}{Claim}
 \newtheorem*{theorem}{Theorem}
+\newtheorem*{corollary}{Corollary}
 
 \DeclareMathOperator{\Ima}{im}
 \DeclareMathOperator{\Gal}{Gal}
