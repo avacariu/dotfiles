@@ -116,7 +116,7 @@
 	ignore = dirty
 [submodule "vim/bundle/vim-jinja"]
 	path = vim/bundle/vim-jinja
-	url = https://github.com/vlad003/vim-jinja.git
+	url = https://github.com/avacariu/vim-jinja.git
 	ignore = dirty
 [submodule "vim/bundle/vim-git"]
 	path = vim/bundle/vim-git
@@ -156,7 +156,7 @@
 	ignore = dirty
 [submodule "vim/bundle/dockerfile.vim"]
 	path = vim/bundle/dockerfile.vim
-	url = https://github.com/vlad003/dockerfile.vim.git
+	url = https://github.com/avacariu/dockerfile.vim.git
 	ignore = dirty
 [submodule "vim/bundle/vim-bracketed-paste"]
 	path = vim/bundle/vim-bracketed-paste
