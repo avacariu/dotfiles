@@ -122,11 +122,11 @@ bd() {
         cd /
         return
     else
-        local newdir=$(dirname $(pwd))
+        local newdir=$(dirname "$(pwd)")
     fi
 
-    while [[ "$(basename $newdir)" != *$1* ]] && [[ "$(basename $newdir)" != "/" ]]; do
-        newdir=$(dirname $newdir)
+    while [[ $(basename "$newdir") != *$1* ]] && [[ $(basename "$newdir") != "/" ]]; do
+        newdir=$(dirname "$newdir")
     done
 
     if [[ $newdir == "/" ]]; then
