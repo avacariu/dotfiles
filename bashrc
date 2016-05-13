@@ -176,6 +176,12 @@ decrypt() {
   openssl enc -d -aes256 -pass pass:"$1" -in "$2" -out "$2".decrypted
 }
 
+print-tmux-colors() {
+    for i in {0..255} ; do
+        printf "\x1b[38;5;${i}mcolour${i}\n"
+    done
+}
+
 complete -F _new-complete new
 
 # git shortcuts
