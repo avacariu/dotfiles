@@ -18,7 +18,7 @@ for file in $files; do
         mv ~/.$file $olddir/
     fi
 	echo "Creating symlink to $file in home directory."
-	ln -s $dir/$file ~/.$file
+	ln -s -f $dir/$file ~/.$file
 done
 
 echo "Setting up .local/bin"
