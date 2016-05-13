@@ -203,9 +203,6 @@ set lazyredraw
 " Don't highlight syntax past this column
 set synmaxcol=196
 
-" Enable vim-autosurround
-"inoremap  ( (<C-O>:call AutoSurround(")")<CR>
-
 " Space indents don't work properly with here-docs
 autocmd FileType sh setlocal noexpandtab
 
