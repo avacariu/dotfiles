@@ -17,7 +17,7 @@ if ! [ -e $LOCK ]; then
     # grab the lock in the main thread to minimize race conditions
     touch $LOCK
     {
-        /usr/lib/update-notifier/apt-check 2>&1 | sed 's/;.*//' > ${FILE}-2
+        /usr/lib/update-notifier/apt-check 2>&1 | sed 's/;.*//' | sed 's/^0$//' > ${FILE}-2
         mv ${FILE}-2 ${FILE}
 
         # make sure we keep the lock for another 30 seconds so that we don't check
