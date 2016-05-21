@@ -206,10 +206,7 @@ set synmaxcol=196
 " Space indents don't work properly with here-docs
 autocmd FileType sh setlocal noexpandtab
 
-let g:pymode_rope = 0
-let g:pymode_virtualenv = 1
-
-let g:pymode = 0
+let g:pymode_rope_completion = 0
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
