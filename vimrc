@@ -18,7 +18,7 @@ let g:ycm_filetype_blacklist={'tex': 1}
 let g:ycm_autoclose_preview_window_after_completion=1
 
 " Disable YCM on some of my machines
-if hostname() =~ '\(haimo\|do\|80x24\)'
+if hostname() =~ '\(haimo\|do\|80x24\|cs-nll-15\)'
     let g:loaded_youcompleteme = 1
 endif
 " }}}
