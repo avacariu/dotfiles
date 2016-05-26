@@ -201,10 +201,12 @@ source ~/.local/bin/bashmarks.sh
 bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
-. /etc/profile.d/vte.sh 2> /dev/null
+source /etc/profile.d/vte.sh 2>/dev/null
+source $MODULESHOME/init/bash 2>/dev/null
+source $MODULESHOME/init/bash_completion 2>/dev/null
 
 export DEBFULLNAME="Andrei Vacariu"
 export DEBEMAIL="andrei@avacariu.me"
 
-### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/home/avacariu/.local/bin/anaconda2/bin:$PATH"
