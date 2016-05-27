@@ -117,6 +117,23 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias cd..="cd .."
+alias ..="cd .."
+alias psg="ps aux | grep"
+alias ris="tput reset"
+alias cdh='cd $(pwd)'
+alias cd-="cd -"
+alias nt="nautilus ."
+alias :e="gvim"
+alias ta="tmux attach || tmux new-session"
+alias py3="python3"
+alias naut="nautilus"
+alias ga="git add"
+alias gau="git add -u"
+# make tmux use 256 color. Unfortunately setting this in .tmux.conf isn't
+# enough
+alias tmux="tmux -2"
+
 bd() {
     if [[ -z $1 ]]; then
         cd /
@@ -136,18 +153,6 @@ bd() {
         cd $newdir
     fi
 }
-
-alias cd..="cd .."
-alias ..="cd .."
-alias psg="ps aux | grep"
-alias ris="tput reset"
-alias cdh='cd $(pwd)'
-alias cd-="cd -"
-alias nt="nautilus ."
-alias :e="gvim"
-alias ta="tmux attach || tmux new-session"
-alias py3="python3"
-alias naut="nautilus"
 
 mkd() {
     mkdir $1 && cd $1
@@ -184,26 +189,15 @@ print-tmux-colors() {
 
 complete -F _new-complete new
 
-# git shortcuts
-alias ga="git add"
-alias gau="git add -u"
-
-# make tmux use 256 color. Unfortunately setting this in .tmux.conf isn't
-# enough
-alias tmux="tmux -2"
-
-# will fail if pythonpy is not installed
-source ~/.local/venvs/pythonpy/bash_completion.d/pycompletion.sh 2> /dev/null
-source ~/.local/bin/bashmarks.sh
-
 bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
+export DEBFULLNAME="Andrei Vacariu"
+export DEBEMAIL="andrei@avacariu.me"
+
+source ~/.local/bin/bashmarks.sh
 source /etc/profile.d/vte.sh 2>/dev/null
 source $MODULESHOME/init/bash 2>/dev/null
 source $MODULESHOME/init/bash_completion 2>/dev/null
-
-export DEBFULLNAME="Andrei Vacariu"
-export DEBEMAIL="andrei@avacariu.me"
 
 source $HOME/.path-prepends.sh
