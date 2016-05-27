@@ -192,8 +192,6 @@ alias gau="git add -u"
 # enough
 alias tmux="tmux -2"
 
-export PATH="~/.local/bin:$PATH"
-
 # will fail if pythonpy is not installed
 source ~/.local/venvs/pythonpy/bash_completion.d/pycompletion.sh 2> /dev/null
 source ~/.local/bin/bashmarks.sh
@@ -208,5 +206,4 @@ source $MODULESHOME/init/bash_completion 2>/dev/null
 export DEBFULLNAME="Andrei Vacariu"
 export DEBEMAIL="andrei@avacariu.me"
 
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/home/avacariu/.local/bin/anaconda2/bin:$PATH"
+source $HOME/.path-prepends.sh

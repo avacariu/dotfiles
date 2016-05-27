@@ -2,7 +2,7 @@
 
 dir=$(pwd)
 olddir=$(pwd)/../dotfiles.bak
-files="bashrc vimrc vim gitconfig irssi tmux.conf latexmkrc"
+files="bashrc vimrc vim gitconfig irssi tmux.conf latexmkrc path-prepends.sh"
 
 echo "Creating $olddir to backup any existing dotfiles in -"
 mkdir -p $olddir
