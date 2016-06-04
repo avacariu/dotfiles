@@ -5,7 +5,7 @@
     name = Andrei Vacariu
 [core]
     editor = vim -c 'startinsert'
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
 [merge]
     conflictstyle = diff3
 [credential]
