@@ -2,7 +2,7 @@
 set nocompatible  " Needed for pathogen to work
 call pathogen#infect()
 call pathogen#helptags()
-let g:pymode_rope_completion = 0
+let g:pymode_rope = 0
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
