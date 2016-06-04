@@ -13,6 +13,8 @@ let g:showmarks_enable=0
 
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
+let g:gundo_prefer_python3 = 1
+
 let g:tex_flavor='latex'
 let g:ycm_filetype_blacklist={'tex': 1}
 let g:ycm_autoclose_preview_window_after_completion=1
