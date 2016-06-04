@@ -178,3 +178,6 @@
 	path = vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
 	ignore = dirty
+[submodule "vim/bundle/undotree"]
+	path = vim/bundle/undotree
+	url = https://github.com/mbbill/undotree.git
