@@ -18,6 +18,7 @@
     df = diff
     dc = diff --cached
     lg = log -p
+    lo = log --oneline
     who = shortlog -s --
     k = !gitk
     root = rev-parse --show-toplevel
