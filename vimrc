@@ -91,15 +91,7 @@ set formatoptions-=t
 set showcmd
 " }}}
 " Colours {{{
-if !has("gui_running")
-    let g:CSApprox_loaded=1
-    colorscheme wombat-term
-else
-    colorscheme wombat
-endif
-
-" set number of colors to 256 so CSApprox will work
-let &t_Co=256
+colorscheme wombat
 " }}}
 " Maps and Movement {{{
 imap jj <Esc>
