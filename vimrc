@@ -13,6 +13,12 @@ let g:showmarks_enable=0
 
 let g:ctrlp_user_command = 'find %s -type f'
 
+" This searches Files, Buffers and MRU files at the same time. For whatever
+" reason, regular CtrlP mode will miss a lot of files in the root directory
+" (e.g. Makefiles). Searching MRU files seems to work a lot better than regular
+" file searching.
+let g:ctrlp_cmd = 'CtrlPMixed'
+
 let g:gundo_prefer_python3 = 1
 
 let g:tex_flavor='latex'
