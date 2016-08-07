@@ -11,7 +11,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 let g:showmarks_enable=0
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_user_command = 'find %s -type f'
 
 let g:gundo_prefer_python3 = 1
 
