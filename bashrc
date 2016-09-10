@@ -16,8 +16,9 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+# TODO: Consider using Eli Bendersky's code for persistent history: https://github.com/eliben/code-for-blog/blob/master/2016/persistent-history/add-persistent-history.sh
+HISTSIZE=-1
+HISTFILESIZE=-1
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
