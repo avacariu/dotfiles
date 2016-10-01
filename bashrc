@@ -136,6 +136,8 @@ alias gau="git add -u"
 # enough
 alias tmux="tmux -2"
 
+alias sshfs-reconnect="sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3"
+
 bd() {
     if [[ -z $1 ]]; then
         cd /
