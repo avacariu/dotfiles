@@ -1,7 +1,9 @@
 #!/bin/bash
 
-FILE=/tmp/NUM_APT_UPDATES_SOME_RANDOM_TEXT
-LOCK=$FILE-lock
+# this makes it so we exit if flock fails
+set -e
+
+FILE=/tmp/NUM_APT_UPDATES
 
 if [ ! -x /usr/lib/update-notifier/apt-check ]; then
     exit
@@ -12,17 +14,17 @@ if [ -e $FILE ]; then
     cat $FILE
 fi
 
-# afterwards, we want to update the value in the file
-if ! [ -e $LOCK ]; then
-    # grab the lock in the main thread to minimize race conditions
-    touch $LOCK
-    {
-        /usr/lib/update-notifier/apt-check 2>&1 | sed 's/;.*//' | sed 's/^0$//' > ${FILE}-2
-        mv ${FILE}-2 ${FILE}
+# NOTE: we're running this in the background so that the first execution of
+# this script returns quickly and TMUX doesn't display <SCRIPT not ready>
+(
+    # if we don't get the lock, it doesn't matter so we'll pretend we were
+    # successfull
+    flock --nonblock 200 || exit 0
 
-        # make sure we keep the lock for another 30 seconds so that we don't check
-        # the number of updates more often than every 30 seconds
-        sleep 30
-        rm -f $LOCK
-    } &
-fi
+    /usr/lib/update-notifier/apt-check 2>&1 | sed 's/;.*//' | sed 's/^0$//' > ${FILE}
+
+    # make sure we keep the lock for another 30 seconds so that we don't check
+    # the number of updates more often than every 30 seconds
+    sleep 30
+
+) 200>/var/lock/num-apt-updates.lock &
