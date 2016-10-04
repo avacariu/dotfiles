@@ -12,6 +12,10 @@ fi
 # first we just want to just return the value we computed before
 if [ -e $FILE ]; then
     cat $FILE
+else
+    # We always need to output something so that TMUX doesn't display
+    # <SCRIPT not ready>
+    echo
 fi
 
 # NOTE: we're running this in the background so that the first execution of
