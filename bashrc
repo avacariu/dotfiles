@@ -15,10 +15,10 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# disable history limits
 # TODO: Consider using Eli Bendersky's code for persistent history: https://github.com/eliben/code-for-blog/blob/master/2016/persistent-history/add-persistent-history.sh
-HISTSIZE=-1
-HISTFILESIZE=-1
+export HISTSIZE=-1
+unset HISTFILESIZE
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
