@@ -153,6 +153,8 @@ map n nzz
 " }}}
 " Search {{{
 set incsearch
+set ignorecase
+set smartcase
 set hlsearch
 " }}}
 " Syntax & Indent {{{
