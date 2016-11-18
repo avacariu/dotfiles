@@ -181,3 +181,6 @@
 [submodule "vim/bundle/undotree"]
 	path = vim/bundle/undotree
 	url = https://github.com/mbbill/undotree.git
+[submodule "vim/bundle/eink.vim"]
+	path = vim/bundle/eink.vim
+	url = https://bitbucket.org/kisom/eink.vim.git
