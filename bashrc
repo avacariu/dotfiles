@@ -200,7 +200,6 @@ export DEBFULLNAME="Andrei Vacariu"
 export DEBEMAIL="andrei@avacariu.me"
 
 source ~/.local/bin/bashmarks.sh
-source /etc/profile.d/vte.sh 2>/dev/null
 source $MODULESHOME/init/bash 2>/dev/null
 source $MODULESHOME/init/bash_completion 2>/dev/null
 
