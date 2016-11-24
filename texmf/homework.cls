@@ -6,7 +6,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{commath}
-\RequirePackage{enumitem}
+\RequirePackage[inline]{enumitem}
 \RequirePackage{parskip}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fancyhdr}
