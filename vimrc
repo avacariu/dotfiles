@@ -91,8 +91,8 @@ set laststatus=2
 " You can use `gq' to realign text.
 set textwidth=79
 
-" Disable automatic text wrapping
-set formatoptions-=t
+" Auto-wrap comments and allow formatting of comments with "gq"
+set formatoptions=cqlj
 
 set showcmd
 " }}}
