@@ -6,7 +6,7 @@ let g:pymode_rope = 0
 
 " Ignore 'line too long' messages. I can't always make the line shorter, and it
 " distracts from other messages. Plus, I already use colorcolumn.
-let g:pymode_lint_ignore = "E501,W"
+let g:pymode_lint_ignore = "E501,C901"
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
