@@ -15,6 +15,7 @@
 \RequirePackage{changepage}
 \RequirePackage{wasysym}
 \RequirePackage{mathtools}
+\RequirePackage{algpseudocode}
 
 \RequirePackage{amsthm}
 % this fixes the lack of space above theorem environments because of the use
@@ -154,3 +155,7 @@
 
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+\DeclareMathOperator{\OPT}{OPT}
