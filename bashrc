@@ -135,6 +135,7 @@ alias gau="git add -u"
 # make tmux use 256 color. Unfortunately setting this in .tmux.conf isn't
 # enough
 alias tmux="tmux -2"
+alias .v="source venv/bin/activate"
 
 alias sshfs-reconnect="sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3"
 
