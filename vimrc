@@ -83,7 +83,7 @@ set colorcolumn=80
 set wildmenu
 
 " Set 5 lines to the cursor - when moving vertically using j/k
-set so=3
+set scrolloff=3
 
 " Show as much of a really long line as possible instead of @
 set display+=lastline
