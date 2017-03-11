@@ -74,6 +74,11 @@ set ttyscroll=3
 " Don't redraw the screen when executing macros, registers and other commands
 " that have not been typed.
 set lazyredraw
+
+" Show < and > when the line continues offscreen.
+" NOTE: precedes only seems to work when `list` is set, but I'm not sure if I
+" want to do that.
+set listchars=extends:>,precedes:<
 " }}}
 " Layout {{{
 set ruler    " Show the current position
@@ -82,8 +87,11 @@ set colorcolumn=80
 
 set wildmenu
 
-" Set 5 lines to the cursor - when moving vertically using j/k
+" Set 3 lines to the cursor - when moving vertically using j/k
 set scrolloff=3
+
+" Leave 5 column on each side of the cursor when moving horizontally
+set sidescrolloff=5
 
 " Show as much of a really long line as possible instead of @
 set display+=lastline
@@ -154,6 +162,10 @@ vmap <LeftMouse> <nop>
 " Center the search result
 map N Nzz
 map n nzz
+
+" Scroll horizontally by 1 column at a time (default is 0 which means to center
+" the cursor when moving past the edge of the screen)
+set sidescroll=1
 " }}}
 " Search {{{
 set incsearch
