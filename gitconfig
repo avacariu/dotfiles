@@ -20,4 +20,4 @@
     who = shortlog -s --
     k = !gitk
     root = rev-parse --show-toplevel
-	unstage = reset HEAD --
+    unstage = reset HEAD --
