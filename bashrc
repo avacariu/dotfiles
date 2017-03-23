@@ -205,3 +205,10 @@ source $MODULESHOME/init/bash 2>/dev/null
 source $MODULESHOME/init/bash_completion 2>/dev/null
 
 source $HOME/.path-prepends.sh
+
+if [[ -d $HOME/.pyenv ]]; then
+  export PYENV_HOME="$HOME/.pyenv"
+  export PATH="$PYENV_HOME/bin:$PATH"
+
+  eval "$(pyenv init -)"
+fi
