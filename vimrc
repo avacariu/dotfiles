@@ -144,6 +144,8 @@ nmap <Leader>e :NERDTreeToggle<CR>
 
 nnoremap <Leader>q :q<CR>
 
+nnoremap <leader>w :w<CR>
+
 " Use SS in visual mode to add spaces around selection
 vmap SS s<Space><Space><Esc>P
 
