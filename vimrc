@@ -79,6 +79,8 @@ set lazyredraw
 " NOTE: precedes only seems to work when `list` is set, but I'm not sure if I
 " want to do that.
 set listchars=extends:>,precedes:<
+
+set cursorline
 " }}}
 " Layout {{{
 set ruler    " Show the current position
