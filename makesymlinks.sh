@@ -24,6 +24,11 @@ done
 echo "Setting up .local/bin"
 mkdir -p ~/.local/bin
 
+echo "Copying i3 configs"
+mkdir -p ~/.config/{i3,i3status}
+cp $dir/i3/config ~/.config/i3/config
+cp $dir/i3status/config ~/.config/i3status/config
+
 echo "Copying bashmarks to .local/bin"
 cp $dir/local/bin/bashmarks/bashmarks.sh ~/.local/bin/
 

@@ -1,0 +1,69 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 1
+}
+
+order += "path_exists VPN"
+order += "path_exists HE"
+order += "wireless _first_"
+order += "ethernet enp0s25"
+order += "cpu_temperature 0"
+order += "battery 0"
+order += "volume master"
+order += "tztime local"
+
+path_exists VPN {
+        path = "/proc/sys/net/ipv4/conf/tun0"
+        format = "VPN"
+        format_down = ""
+}
+
+path_exists HE {
+        path = "/sys/class/net/he-ipv6"
+        format = "HE"
+        format_down = ""
+}
+
+wireless _first_ {
+        format_up = "📶  %essid"
+        format_down = ""
+}
+
+ethernet enp0s25 {
+        format_up = "%ip"
+        format_down = ""
+}
+
+cpu_temperature 0 {
+        format = "%degrees°"
+}
+
+battery 0 {
+        format = "%status %percentage"
+        last_full_capacity = true
+        hide_seconds = true
+        integer_battery_capacity = true
+        status_chr = 🔌
+        status_bat = 🔋
+        status_full = 🔌
+        low_threshold = 15
+        threshold_type = percentage
+}
+
+tztime local {
+        format = "%a %-e %b %Y. %H:%M:%S"
+}
+
+volume master {
+        format = "🔊  %volume"
+        format_muted = "🔇 %volume"
+        device = "pulse"
+}
