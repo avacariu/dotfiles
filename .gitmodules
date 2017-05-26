@@ -104,7 +104,7 @@
 	ignore = dirty
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
-	url = https://github.com/klen/python-mode.git
+	url = https://github.com/python-mode/python-mode.git
 	ignore = dirty
 [submodule "vim/bundle/vim-qml"]
 	path = vim/bundle/vim-qml
