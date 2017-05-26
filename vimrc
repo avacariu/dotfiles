@@ -3,6 +3,7 @@ set nocompatible  " Needed for pathogen to work
 call pathogen#infect()
 call pathogen#helptags()
 let g:pymode_rope = 0
+let g:pymode_python = 'python3'
 
 " Ignore 'line too long' messages. I can't always make the line shorter, and it
 " distracts from other messages. Plus, I already use colorcolumn.
