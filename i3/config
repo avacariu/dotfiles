@@ -173,14 +173,9 @@ bar {
         font pango:Hack 8
 }
 
-# Volume change
-# NOTE: there's only one sink! PulseAudio or ALSA automagically remembers the
-# volume for each actual device (internal speakers / headphones), but only 1
-# sink actually shows up. Try it! Run `alsamixer` and plug in your headphones
-# and see that it somehow works.
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 bindsym control+mod1+l exec "~/.local/bin/i3lock.sh"
 
