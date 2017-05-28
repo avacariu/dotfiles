@@ -179,9 +179,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 
 bindsym control+mod1+l exec "~/.local/bin/i3lock.sh"
 
-# XXX This xset doesn't actually work!
-# The same timeout is also set in i3lock.sh as a workaround
-exec --no-startup-id xset dpms 300 300 300
 exec --no-startup-id xautolock -time 5 -locker "~/.local/bin/i3lock.sh"
 
 exec --no-startup-id nm-applet
