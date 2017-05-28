@@ -179,7 +179,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 
 bindsym control+mod1+l exec "~/.local/bin/i3lock.sh"
 
-bindsym XF86TouchpadToggle exec --no-startup-id "if synclient -l | grep -q -i --perl-regexp '\s*touchpadoff\s*=\s*1'; then synclient touchpadoff=0; else synclient touchpadoff=1; fi"
 # NOTE: It's necessary to keep this xset here or else the screen won't turn off
 exec --no-startup-id xset dpms 300 300 300
 exec --no-startup-id xautolock -time 5 -locker "~/.local/bin/i3lock.sh"
