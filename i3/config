@@ -177,7 +177,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-bindsym control+mod1+l exec "~/.local/bin/i3lock.sh"
+bindsym control+mod1+l exec $HOME/.local/bin/i3lock.sh immediate
 
 exec --no-startup-id xautolock -time 5 -locker "~/.local/bin/i3lock.sh"
 
