@@ -192,6 +192,11 @@ print-tmux-colors() {
     done
 }
 
+printcol() {
+  awk ${@:2} -- "{ print \$${1} }"
+}
+
+
 complete -F _new-complete new
 
 bind '"\e[A"':history-search-backward
