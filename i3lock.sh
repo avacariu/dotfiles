@@ -1,12 +1,14 @@
 #!/bin/bash
 
-xset +dpms
+OLD_TIMEOUT=$(xset q | grep --perl-regexp -o 'Standby: \K\d+')
 
 revert() {
-    xset dpms 0 0 0
+    xset dpms $OLD_TIMEOUT $OLD_TIMEOUT $OLD_TIMEOUT
 }
 
 trap revert HUP INT TERM
+
+xset +dpms
 
 if [[ $1 != "immediate" ]]; then
     # Wait 5 seconds before locking the screen to give the user a few seconds
