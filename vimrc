@@ -188,6 +188,15 @@ filetype plugin indent on
 set synmaxcol=196
 
 set backspace=indent,eol,start
+
+function Reindent2to4() range
+    setlocal tabstop=2 softtabstop=2 noexpandtab
+    execute (a:firstline + 1) . "," . a:lastline . 'retab!'
+    setlocal tabstop=4 softtabstop=4 expandtab
+    execute (a:firstline + 1) . "," . a:lastline . 'retab'
+endfunction
+
+command -range=% Reident2to4 <line1>,<line2>call Reindent2to4()
 " }}}
 " Behaviour {{{
 " Set how many lines of history VIM has to remember
