@@ -19,5 +19,6 @@
     k = !gitk
     root = rev-parse --show-toplevel
     unstage = reset HEAD --
+    amend = commit --amend
 [status]
     showuntrackedfiles = all
