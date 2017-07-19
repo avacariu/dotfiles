@@ -9,6 +9,9 @@ let g:pymode_python = 'python3'
 " distracts from other messages. Plus, I already use colorcolumn.
 let g:pymode_lint_ignore = "E501,C901"
 
+" Modify the default regex to also include cpdef / cdef in Cython
+let g:pymode_folding_regex = '^\s*\%(class\|\(c\|cp\)\=def\|async\s\+def\) .\+\(:\s\+\w\)\@!'
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
