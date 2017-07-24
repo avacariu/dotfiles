@@ -196,6 +196,16 @@ printcol() {
   awk ${@:2} -- "{ print \$${1} }"
 }
 
+myip4() {
+  dig +short myip.opendns.com @resolver1.opendns.com
+}
+
+myip6() {
+  ip -o -6 address show  scope global temporary | \
+    awk '{ print $4 }' | \
+    cut -d/ -f1
+}
+
 
 complete -F _new-complete new
 
