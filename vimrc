@@ -239,5 +239,7 @@ autocmd FileType htmldjango setlocal shiftwidth=2 softtabstop=2
 " Don't fold the top level; only fold stuff below (e.g. don't fold classes, but
 " fold methods within classes)
 set foldlevel=1
+
+set pastetoggle=<leader>p
 "}}}
 " vim:foldmethod=marker:foldlevel=0
