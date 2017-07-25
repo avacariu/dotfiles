@@ -22,3 +22,5 @@
     amend = commit --amend
 [status]
     showuntrackedfiles = all
+[pager]
+    status = true
