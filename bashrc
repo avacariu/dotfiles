@@ -111,11 +111,11 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 alias cd..="cd .."
@@ -179,11 +179,11 @@ _new-complete() {
 }
 
 encrypt() {
-  openssl enc -aes256 -pass pass:"$1" -in "$2" -out "$2".encrypted
+    openssl enc -aes256 -pass pass:"$1" -in "$2" -out "$2".encrypted
 }
 
 decrypt() {
-  openssl enc -d -aes256 -pass pass:"$1" -in "$2" -out "$2".decrypted
+    openssl enc -d -aes256 -pass pass:"$1" -in "$2" -out "$2".decrypted
 }
 
 print-tmux-colors() {
@@ -193,17 +193,17 @@ print-tmux-colors() {
 }
 
 printcol() {
-  awk ${@:2} -- "{ print \$${1} }"
+    awk ${@:2} -- "{ print \$${1} }"
 }
 
 myip4() {
-  dig +short myip.opendns.com @resolver1.opendns.com
+    dig +short myip.opendns.com @resolver1.opendns.com
 }
 
 myip6() {
-  ip -o -6 address show  scope global temporary | \
-    awk '{ print $4 }' | \
-    cut -d/ -f1
+    ip -o -6 address show  scope global temporary | \
+        awk '{ print $4 }' | \
+        cut -d/ -f1
 }
 
 
@@ -222,8 +222,8 @@ source $MODULESHOME/init/bash_completion 2>/dev/null
 source $HOME/.path-prepends.sh
 
 if [[ -d $HOME/.pyenv ]]; then
-  export PYENV_HOME="$HOME/.pyenv"
-  export PATH="$PYENV_HOME/bin:$PATH"
+    export PYENV_HOME="$HOME/.pyenv"
+    export PATH="$PYENV_HOME/bin:$PATH"
 
-  eval "$(pyenv init -)"
+    eval "$(pyenv init -)"
 fi
