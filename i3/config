@@ -117,10 +117,14 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 bindsym Control+$mod+Left workspace prev
+bindsym Control+$mod+h workspace prev
 bindsym Control+$mod+Right workspace next
+bindsym Control+$mod+l workspace next
 
 bindsym Control+Shift+$mod+Left move container to workspace prev; workspace prev
+bindsym Control+Shift+$mod+h move container to workspace prev; workspace prev
 bindsym Control+Shift+$mod+Right move container to workspace next; workspace next
+bindsym Control+Shift+$mod+l move container to workspace next; workspace next
 
 bindsym Control+mod1+$mod+Right move workspace to output right
 bindsym Control+mod1+$mod+Left move workspace to output left
