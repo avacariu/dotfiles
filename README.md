@@ -29,5 +29,6 @@ Setting it up
 Updating YouCompleteMe
 ======================
 
+    cd vim/bundle/YouCompleteMe
     git submodule update --init --recursive
-    ./install.sh --clang-completer --system-libclang
+    python3 ./install.py --clang-completer
