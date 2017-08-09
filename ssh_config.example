@@ -1,0 +1,44 @@
+# Simple example
+
+Host somehost
+    Hostname somehost.example.com
+    User andrei
+    IdentityFile ~/.ssh/id_ed25519.pub
+
+
+# Using a jump host
+# i.e. easily access `target` when you have to ssh into `jumphost` first
+
+Host target
+    Hostname target.example.com
+    User andrei
+    IdentityFile ~/.ssh/id_ed25519.pub
+    ProxyCommand ssh -q -W %h:%p jumphost
+    # NOTE, in newer versions of OpenSSH, you can just use
+    # ProxyJump jumphost
+
+Host jumphost
+    Hostname jumphost.example.com
+    User andrei
+    IdentityFile ~/.ssh/id_ed25519.pub
+
+
+# Git repositories
+
+Host github.com
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+
+Host bitbucket.org
+    Hostname bitbucket.org
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+
+
+# Automatically add keys to the ssh agent so you don't have to add them
+# yourself using ssh-add every time.
+Host *
+    AddKeysToAgent yes
+
+# vim:filetype=sshconfig
