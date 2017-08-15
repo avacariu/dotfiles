@@ -30,7 +30,7 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:gundo_prefer_python3 = 1
 
 let g:tex_flavor='latex'
-let g:ycm_filetype_blacklist={'tex': 1}
+let g:ycm_filetype_blacklist={'tex': 1, 'bib': 1}
 let g:ycm_autoclose_preview_window_after_completion=1
 
 " Disable YCM on some of my machines
