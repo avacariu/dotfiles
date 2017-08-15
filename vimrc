@@ -174,6 +174,8 @@ map n nzz
 " Scroll horizontally by 1 column at a time (default is 0 which means to center
 " the cursor when moving past the edge of the screen)
 set sidescroll=1
+
+nnoremap <Leader>gb :Gblame<CR>
 " }}}
 " Search {{{
 set incsearch
