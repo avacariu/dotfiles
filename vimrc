@@ -1,7 +1,10 @@
 " Plugins {{{
 set nocompatible  " Needed for pathogen to work
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
+
 let g:pymode_rope = 0
 let g:pymode_python = 'python3'
 
