@@ -207,6 +207,20 @@ myip6() {
 }
 
 
+start-ssh-agent() {
+    if [ -z "$SSH_AUTH_SOCK" ] ; then
+        eval `ssh-agent -s`
+        ssh-add
+    fi
+}
+
+kill-ssh-agent() {
+    if [ -n "$SSH_AUTH_SOCK" ] ; then
+        eval `/usr/bin/ssh-agent -k`
+    fi
+}
+
+
 complete -F _new-complete new
 
 bind '"\e[A"':history-search-backward
