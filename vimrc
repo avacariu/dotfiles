@@ -128,7 +128,7 @@ cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
 
 " Shortcut to clear search highlights
 " Chosen because this is gedit's default
-map <C-k> :nohls<CR>
+map <Leader>k :nohls<CR>
 
 " Make Y consistent with C and D. See :help Y.
 nnoremap Y y$
