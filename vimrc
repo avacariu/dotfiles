@@ -179,6 +179,12 @@ map n nzz
 set sidescroll=1
 
 nnoremap <Leader>gb :Gblame<CR>
+
+" Use ctrl-{hjkl} to switch panes
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 " }}}
 " Search {{{
 set incsearch
