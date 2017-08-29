@@ -62,10 +62,6 @@
 	path = vim/bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
 	ignore = dirty
-[submodule "vim/bundle/highlight.vim"]
-	path = vim/bundle/highlight.vim
-	url = https://github.com/vim-scripts/highlight.vim.git
-	ignore = dirty
 [submodule "vim/bundle/rust.vim"]
 	path = vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
