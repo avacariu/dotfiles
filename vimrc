@@ -127,8 +127,7 @@ imap jj <Esc>
 cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
 
 " Shortcut to clear search highlights
-" Chosen because this is gedit's default
-map <Leader>k :nohls<CR>
+nmap <silent> <BS>  :nohlsearch<CR>
 
 " Make Y consistent with C and D. See :help Y.
 nnoremap Y y$
