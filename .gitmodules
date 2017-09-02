@@ -189,3 +189,6 @@
 [submodule "vim/bundle/vimtex"]
 	path = vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "vim/bundle/vim-schlepp"]
+	path = vim/bundle/vim-schlepp
+	url = https://github.com/zirrostig/vim-schlepp.git
