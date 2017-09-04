@@ -240,6 +240,9 @@ set modelines=1
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
+
+" Save swap file every 10 characters types
+set updatecount=10
 " }}}
 " Misc {{{
 " shortcut to cd to the current file's dir
