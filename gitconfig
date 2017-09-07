@@ -20,6 +20,8 @@
     root = rev-parse --show-toplevel
     unstage = reset HEAD --
     amend = commit --amend
+[commit]
+	verbose = true
 [status]
     showuntrackedfiles = all
 [pager]
