@@ -154,6 +154,9 @@ nnoremap <Leader>q :q<CR>
 
 nnoremap <leader>w :w<CR>
 
+nnoremap <silent> <leader>o :call append(line('.'), '')<CR>
+nnoremap <silent> <leader>O :call append(line('.') - 1, '')<CR>
+
 " Use SS in visual mode to add spaces around selection
 vmap SS s<Space><Space><Esc>P
 
