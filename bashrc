@@ -235,6 +235,8 @@ source $MODULESHOME/init/bash_completion 2>/dev/null
 
 source $HOME/.path-prepends.sh
 
+source $HOME/.bashrc_local 2>/dev/null
+
 if [[ -d $HOME/.pyenv ]]; then
     export PYENV_HOME="$HOME/.pyenv"
     export PATH="$PYENV_HOME/bin:$PATH"
