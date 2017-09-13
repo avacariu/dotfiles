@@ -163,9 +163,9 @@ function! AddSpacesAround() range
     let m = visualmode()
     if m ==# 'v' || m ==# "\<C-V>"
         execute "normal gvs\<space>\<space>\<esc>P"
-    elseif m == 'V'
-        call append(line('.'), '')
-        call append(line('.') - 1, '')
+    elseif m ==# 'V'
+        call append(line("'<")-1, '')
+        call append(line("'>"), '')
     endif
 endfunction
 
