@@ -158,7 +158,16 @@ nnoremap <silent> <leader>o :call append(line('.'), '')<CR>
 nnoremap <silent> <leader>O :call append(line('.') - 1, '')<CR>
 
 " Use SS in visual mode to add spaces around selection
-vmap SS s<Space><Space><Esc>P
+vnoremap <silent> SS :<C-U>call AddSpacesAround()<CR>
+function! AddSpacesAround() range
+    let m = visualmode()
+    if m ==# 'v' || m ==# "\<C-V>"
+        execute "normal gvs\<space>\<space>\<esc>P"
+    elseif m == 'V'
+        call append(line('.'), '')
+        call append(line('.') - 1, '')
+    endif
+endfunction
 
 " use \s for spellcheck
 nnoremap \s a<C-X><C-S>
