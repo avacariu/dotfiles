@@ -126,6 +126,7 @@ alias cdh='cd $(pwd)'
 alias cd-="cd -"
 alias nt="nautilus --no-desktop ."
 alias :e="vim"
+alias vim.="vim ."
 alias ed="ed -p:"
 alias ta="tmux attach || tmux new-session"
 alias py3="python3"
