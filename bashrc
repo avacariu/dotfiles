@@ -78,7 +78,12 @@ esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    if [[ -r ~/.dircolors ]]; then
+        eval "$(dircolors -b ~/.dircolors)";
+    else
+        eval "$(dircolors -b)"
+    fi
+
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
@@ -141,11 +146,12 @@ alias .v="source venv/bin/activate"
 alias sshfs-reconnect="sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3"
 
 bd() {
+    local newdir
     if [[ -z $1 ]]; then
         cd /
         return
     else
-        local newdir=$(dirname "$(pwd)")
+        newdir=$(dirname "$(pwd)")
     fi
 
     while [[ $(basename "$newdir") != *$1* ]] && [[ $(basename "$newdir") != "/" ]]; do
@@ -155,13 +161,13 @@ bd() {
     if [[ $newdir == "/" ]]; then
         echo "No directory containing '$1' found."
     else
-        echo $newdir
-        cd $newdir
+        echo "$newdir"
+        cd "$newdir"
     fi
 }
 
 mkd() {
-    mkdir $1 && cd $1
+    mkdir "$1" && cd "$1"
 }
 
 numfiles() {
@@ -171,7 +177,7 @@ numfiles() {
 }
 
 new() {
-    cp $HOME/Templates/$1 $2
+    cp "$HOME/Templates/$1" "$2"
 }
 
 _new-complete() {
@@ -189,12 +195,12 @@ decrypt() {
 
 print-tmux-colors() {
     for i in {0..255} ; do
-        printf "\e[38;5;${i}mcolour${i}\n"
+        printf "\e[38;5;%smcolour%s\n" "$i" "$i"
     done
 }
 
 printcol() {
-    awk ${@:2} -- "{ print \$${1} }"
+    awk "${@:2}" -- "{ print \$${1} }"
 }
 
 myip4() {
@@ -210,14 +216,14 @@ myip6() {
 
 start-ssh-agent() {
     if [ -z "$SSH_AUTH_SOCK" ] ; then
-        eval `ssh-agent -s`
+        eval "$(ssh-agent -s)"
         ssh-add
     fi
 }
 
 kill-ssh-agent() {
     if [ -n "$SSH_AUTH_SOCK" ] ; then
-        eval `/usr/bin/ssh-agent -k`
+        eval "$(/usr/bin/ssh-agent -k)"
     fi
 }
 
@@ -231,14 +237,14 @@ export DEBFULLNAME="Andrei Vacariu"
 export DEBEMAIL="andrei@avacariu.me"
 
 source ~/.local/bin/bashmarks.sh
-source $MODULESHOME/init/bash 2>/dev/null
-source $MODULESHOME/init/bash_completion 2>/dev/null
+source "$MODULESHOME"/init/bash 2>/dev/null
+source "$MODULESHOME"/init/bash_completion 2>/dev/null
 
-source $HOME/.path-prepends.sh
+source ~/.path-prepends.sh
 
-source $HOME/.bashrc_local 2>/dev/null
+source ~/.bashrc_local 2>/dev/null
 
-if [[ -d $HOME/.pyenv ]]; then
+if [[ -d ~/.pyenv ]]; then
     export PYENV_HOME="$HOME/.pyenv"
     export PATH="$PYENV_HOME/bin:$PATH"
 
@@ -249,7 +255,7 @@ fi
 # credit: https://unix.stackexchange.com/a/217223
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
     if [[ -z $SSH_AUTH_SOCK ]]; then
-        eval `ssh-agent`
+        eval "$(ssh-agent)"
     fi
     ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
 fi
