@@ -45,6 +45,21 @@ let g:ycm_autoclose_preview_window_after_completion=1
 if hostname() =~ '\(haimo\|do\|80x24\|cs-nll-21\)'
     let g:loaded_youcompleteme = 1
 endif
+
+" Syntastic related stuff
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ignore_files = ['\.py$']
+
+" These might get disabled by YCM
+let g:syntastic_cpp_checkers = ['gcc']
+let g:syntastic_c_checkers = ['gcc']
 " }}}
 " Spaces & Tabs {{{
 " Use spaces instead of tabs
