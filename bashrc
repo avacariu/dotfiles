@@ -195,7 +195,7 @@ decrypt() {
 
 print-tmux-colors() {
     for i in {0..255} ; do
-        printf "\e[38;5;%smcolour%s\n" "$i" "$i"
+        printf "\e[48;5;%sm    \e[0m \e[38;5;%smcolour \e[1m%s\n" "$i" "$i" "$i"
     done
 }
 
