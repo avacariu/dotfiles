@@ -7,6 +7,8 @@ call pathogen#helptags()
 
 let g:pymode_python = 'python3'
 
+let g:mymode_lint_checkers = ['pylint', 'pep8', 'mccabe']
+
 " Ignore 'line too long' messages. I can't always make the line shorter, and it
 " distracts from other messages. Plus, I already use colorcolumn.
 let g:pymode_lint_ignore = "E501,C901"
