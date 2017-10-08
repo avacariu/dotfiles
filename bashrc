@@ -227,6 +227,14 @@ kill-ssh-agent() {
     fi
 }
 
+new-venv() {
+    if [[ -d venv ]]; then
+        echo "./venv/ already exists!"
+        return 1
+    fi
+
+    python3 -m venv venv
+}
 
 complete -F _new-complete new
 
