@@ -186,7 +186,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id gdbus call --session --dest o
 
 bindsym control+mod1+l exec $HOME/.local/bin/i3lock.sh immediate
 
-exec --no-startup-id xautolock -time 5 -locker "~/.local/bin/i3lock.sh"
+exec --no-startup-id xautolock -time 5 -locker "~/.local/bin/i3lock.sh" -detectsleep -corners -000
 
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-screensaver
