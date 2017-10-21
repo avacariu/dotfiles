@@ -192,3 +192,6 @@
 [submodule "vim/bundle/vim-schlepp"]
 	path = vim/bundle/vim-schlepp
 	url = https://github.com/zirrostig/vim-schlepp.git
+[submodule "vim/bundle/vim-racket"]
+	path = vim/bundle/vim-racket
+	url = https://github.com/wlangstroth/vim-racket.git
