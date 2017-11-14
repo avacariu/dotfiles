@@ -236,6 +236,12 @@ new-venv() {
     python3 -m venv venv
 }
 
+update-keepassrpc() {
+    curl -s https://api.github.com/repos/kee-org/keepassrpc/releases/latest | \
+        jq -r ".assets[] | select(.name | test(\"KeePassRPC.plgx\")) | .browser_download_url" | \
+        xargs sudo curl -s -L -o "/usr/lib/keepass2/plugins/KeePassRPC.plgx"
+}
+
 complete -F _new-complete new
 
 bind '"\e[A"':history-search-backward
