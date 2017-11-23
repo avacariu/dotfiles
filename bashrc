@@ -234,6 +234,7 @@ new-venv() {
     fi
 
     python3 -m venv venv
+    source venv/bin/activate
 }
 
 update-keepassrpc() {
