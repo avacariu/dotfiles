@@ -237,6 +237,12 @@ new-venv() {
     source venv/bin/activate
 }
 
+tmp-venv() {
+    tmpdir=$(mktemp -d)
+    python3 -m venv "$tmpdir"
+    source "$tmpdir/bin/activate"
+}
+
 update-keepassrpc() {
     curl -s https://api.github.com/repos/kee-org/keepassrpc/releases/latest | \
         jq -r ".assets[] | select(.name | test(\"KeePassRPC.plgx\")) | .browser_download_url" | \
