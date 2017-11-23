@@ -238,7 +238,7 @@ new-venv() {
 }
 
 tmp-venv() {
-    tmpdir=$(mktemp -d)
+    tmpdir=$(mktemp -d --suffix=.venv)
     python3 -m venv "$tmpdir"
     source "$tmpdir/bin/activate"
 }
