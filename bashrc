@@ -228,18 +228,30 @@ kill-ssh-agent() {
 }
 
 new-venv() {
+    if [[ -n $1 ]]; then
+        python_ver=$1
+    else
+        python_ver=python3
+    fi
+
     if [[ -d venv ]]; then
         echo "./venv/ already exists!"
         return 1
     fi
 
-    python3 -m venv venv
+    $python_ver -m venv venv
     source venv/bin/activate
 }
 
 tmp-venv() {
+    if [[ -n $1 ]]; then
+        python_ver=$1
+    else
+        python_ver=python3
+    fi
+
     tmpdir=$(mktemp -d --suffix=.venv)
-    python3 -m venv "$tmpdir"
+    $python_ver -m venv "$tmpdir"
     source "$tmpdir/bin/activate"
 }
 
