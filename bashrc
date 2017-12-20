@@ -173,7 +173,7 @@ mkd() {
 numfiles() {
     for dir in "$@"; do
         /bin/echo -e "$(find -L "$dir" -type f | wc -l) \t $dir"
-    done
+    done | sort -h --reverse
 }
 
 new() {
