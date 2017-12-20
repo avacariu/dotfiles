@@ -261,6 +261,10 @@ update-keepassrpc() {
         xargs sudo curl -s -L -o "/usr/lib/keepass2/plugins/KeePassRPC.plgx"
 }
 
+jn() {
+    vim "+normal Go" +startinsert ~/Documents/journal/"$(date +%Y-%m-%d-%A)".md
+}
+
 complete -F _new-complete new
 
 bind '"\e[A"':history-search-backward
