@@ -140,6 +140,14 @@ set showcmd
 " }}}
 " Colours {{{
 colorscheme wombat
+
+" this is because there seems to be problems in tmux with the background not
+" being completely painted.
+" See https://vi.stackexchange.com/questions/238/tmux-is-changing-part-of-the-background-in-vim
+if &term =~ '256color'
+  " disable Background Color Erase (BCE)
+  set t_ut=
+endif
 " }}}
 " Maps and Movement {{{
 imap jj <Esc>
