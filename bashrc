@@ -265,6 +265,10 @@ jn() {
     vim "+normal Go" +startinsert ~/Documents/journal/"$(date +%Y-%m-%d-%A)".md
 }
 
+get-gitignore() {
+    curl "https://www.gitignore.io/api/c%2Cvim%2Cpython" > .gitignore
+}
+
 complete -F _new-complete new
 
 bind '"\e[A"':history-search-backward
