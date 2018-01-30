@@ -275,9 +275,13 @@ set nojoinspaces
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc,*.class
 
-" Use the GNOME system clipboard when yanking and pasting
-" NOTE: unnamed is X11, unnamedplus is GNOME
-set clipboard^=unnamedplus
+" macOS has('unix') but Linux doesn't has('macunix') so this is the simplest
+" way of handling the check
+if !has('macunix')
+    " Use the GNOME system clipboard when yanking and pasting
+    " NOTE: unnamed is X11, unnamedplus is GNOME
+    set clipboard^=unnamedplus
+endif
 
 " allows hiding modified buffers (useful for using Tab to switch buffers)
 set hidden
