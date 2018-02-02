@@ -11,7 +11,7 @@ let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe']
 
 " Ignore 'line too long' messages. I can't always make the line shorter, and it
 " distracts from other messages. Plus, I already use colorcolumn.
-let g:pymode_lint_ignore = ['E501', 'C901']
+let g:pymode_lint_ignore = ['E501', 'E741', 'C901']
 
 " Modify the default regex to also include cpdef / cdef in Cython
 let g:pymode_folding_regex = '^\s*\%(class\|\(c\|cp\)\=def\|async\s\+def\) .\+\(:\s\+\w\)\@!'
