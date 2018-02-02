@@ -1,3 +1,7 @@
+if [[ $OSTYPE = darwin* ]]; then
+    export PATH="/usr/local/sbin:$PATH"
+fi
+
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/anaconda2/bin:$PATH"
