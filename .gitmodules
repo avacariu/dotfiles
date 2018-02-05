@@ -201,3 +201,6 @@
 [submodule "vim/bundle/acme-colors"]
 	path = vim/bundle/acme-colors
 	url = https://github.com/plan9-for-vimspace/acme-colors.git
+[submodule "vim/bundle/linediff.vim"]
+	path = vim/bundle/linediff.vim
+	url = https://github.com/AndrewRadev/linediff.vim.git
