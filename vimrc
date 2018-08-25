@@ -51,7 +51,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_ignore_files = ['\.py$']
 
 " These might get disabled by YCM
 let g:syntastic_cpp_checkers = ['gcc']
