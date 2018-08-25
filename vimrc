@@ -41,13 +41,6 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:gundo_prefer_python3 = 1
 
 let g:tex_flavor='latex'
-let g:ycm_filetype_blacklist={'tex': 1, 'bib': 1, 'py': 1}
-let g:ycm_autoclose_preview_window_after_completion=1
-
-" Disable YCM on some of my machines
-if hostname() =~ '\(haimo\|do\|80x24\|cs-nll-21\)'
-    let g:loaded_youcompleteme = 1
-endif
 
 " Syntastic related stuff
 set statusline+=%#warningmsg#
