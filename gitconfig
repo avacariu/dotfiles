@@ -21,7 +21,7 @@
     unstage = reset HEAD --
     amend = commit --amend
 [commit]
-	verbose = true
+    verbose = true
 [status]
     showuntrackedfiles = all
 [pager]
