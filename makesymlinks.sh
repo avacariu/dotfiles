@@ -41,8 +41,16 @@ cp $dir/local/bin/get-temp.sh ~/.local/bin/
 
 echo "Setting up powerline fonts"
 cd /tmp
-wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+
+if which -s wget; then
+    wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+    wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+else
+    # This is mostly going to be Macs
+    curl https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf --output PowerlineSymbols.otf
+    curl https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf --output 10-powerline-symbols.otf
+fi
+
 mkdir -p ~/.fonts/ && mv PowerlineSymbols.otf ~/.fonts/
 fc-cache -vf ~/.fonts
 mkdir -p ~/.config/fontconfig/conf.d/ && mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
