@@ -55,6 +55,12 @@ let g:syntastic_check_on_wq = 0
 " These might get disabled by YCM
 let g:syntastic_cpp_checkers = ['gcc']
 let g:syntastic_c_checkers = ['gcc']
+
+let g:pymode_rope_goto_definition_bind = '<Leader>pd'
+let g:pymode_rope_rename_bind = '<Leader>pr'
+let g:pymode_rope_organize_imports_bind = '<Leader>poi'
+let g:pymode_rope_autoimport_bind = '<Leader>pi'
+let g:pymode_rope_extract_method_bind = '<Leader>pem'
 " }}}
 " Spaces & Tabs {{{
 " Use spaces instead of tabs
