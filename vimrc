@@ -52,6 +52,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" let python-mode handle this since syntastic wants pylint to be installed in
+" $PATH
+let g:syntastic_ignore_files = ['\.py$']
+
 " These might get disabled by YCM
 let g:syntastic_cpp_checkers = ['gcc']
 let g:syntastic_c_checkers = ['gcc']
