@@ -9,4 +9,6 @@ augroup filetypedetect
     au! BufNewFile,BufRead *.md                      setf markdown
     au! BufNewFile,BufRead *.twg                     setf htmldjango
     au! BufNewFile,BufRead .tmux.conf*,tmux.conf*    setf tmux
+    au! BufNewFile,BufRead Pipfile                   setf toml
+    au! BufNewFile,BufRead Pipfile.lock              setf json
 augroup END
