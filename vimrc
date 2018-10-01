@@ -18,6 +18,10 @@ let g:pymode_lint_ignore = ['E501', 'E741', 'C901']
 let g:pymode_folding_regex = '^\s*\%(class\|\(c\|cp\)\=def\|async\s\+def\) .\+\(:\s\+\w\)\@!'
 let g:pymode_folding = 0
 
+" autoclose preview window (the place the help text is shown when
+" autocompleting python methods)
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
