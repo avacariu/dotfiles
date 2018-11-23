@@ -60,8 +60,15 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\e[01m\e[38;5;10m\]\u@\h\[\e[00m\]:\[\e[01m\e[38;5;12m\]\w\[\e[00m\] \$ '
+    PS1='${debian_chroot:+($debian_chroot)}'
+    PS1="$PS1"'\[\e[01m\e[38;5;10m\]\u@\h\[\e[00m\]'
+    PS1="$PS1"':\[\e[01m\e[38;5;12m\]\w\[\e[00m\]'
+    PS1="$PS1"'\[\e[01m\e[38;5;10m\]$(declare -F __git_ps1 &>/dev/null && __git_ps1 " (%s)")\[\e[00m\]'
+    PS1="$PS1"' \$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w \$ '
 fi
