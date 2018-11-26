@@ -279,6 +279,30 @@ get-gitignore() {
     curl "https://www.gitignore.io/api/c%2Cvim%2Cpython" > .gitignore
 }
 
+new-repo() {
+    local name="$1";
+
+    if [[ -d $name ]]; then
+        echo "Directory '$name' already exists!"
+        return 1
+    fi
+
+    if [[ -z $name ]]; then
+        echo "Need to specify a repo name"
+        return 2
+    fi
+
+
+    mkdir "$name"
+    cd "$name"
+    git init
+    get-gitignore
+
+    echo "# $name" >> README.md
+
+    git status
+}
+
 complete -F _new-complete new
 
 bind '"\e[A"':history-search-backward
