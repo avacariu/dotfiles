@@ -272,7 +272,20 @@ update-keepassrpc() {
 }
 
 jn() {
-    vim "+normal Go" +startinsert ~/Documents/journal/"$(date +%Y-%m-%d-%A)".md
+    local journal_filepath
+    local cur_date
+
+    cur_date="$(date '+%Y-%m-%d %A')"
+    mkdir -p ~/Documents/journal/{day,topic}
+
+    if [[ -n $1 ]]; then
+        journal_filepath=~/Documents/journal/topic/"$1".md
+
+        vim "+normal Go - ($cur_date) " +startinsert! "$journal_filepath"
+    else
+        journal_filepath=~/Documents/journal/day/"$cur_date".md
+        vim "+normal Go" +startinsert "$journal_filepath"
+    fi
 }
 
 get-gitignore() {
