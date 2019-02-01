@@ -64,7 +64,7 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\e[1m\e[31m\]+\[\e[0m\] '
+    PS1='\n\[\e[1m\e[31m\]+\[\e[0m\] '
     PS1="$PS1"'${debian_chroot:+($debian_chroot)}'
     PS1="$PS1"'\[\e[01m\e[38;5;10m\]\u@\h\[\e[0m\]'
     PS1="$PS1"':\[\e[01m\e[38;5;12m\]\w\[\e[0m\]'
