@@ -60,11 +60,27 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# credit: https://stackoverflow.com/a/20026992
+function virtualenv_info() {
+    # Get Virtual Env
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        # Strip out the path and just leave the env name
+        venv="${VIRTUAL_ENV##*/}"
+    else
+        # In case you don't have one activated
+        venv=''
+    fi
+    [[ -n "$venv" ]] && echo "($venv) "
+}
+
+# disable the default virtualenv prompt change
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 if [ "$color_prompt" = yes ]; then
     PS1='\n\[\e[1m\e[31m\]+\[\e[0m\] '
+    PS1="$PS1"'$(virtualenv_info)'
     PS1="$PS1"'${debian_chroot:+($debian_chroot)}'
     PS1="$PS1"'\[\e[01m\e[38;5;10m\]\u@\h\[\e[0m\]'
     PS1="$PS1"':\[\e[01m\e[38;5;12m\]\w\[\e[0m\]'
