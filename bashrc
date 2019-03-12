@@ -333,6 +333,14 @@ new-repo() {
     git status
 }
 
+dirhash() {
+    find $1 -type f -print0 | sort -z | xargs -0 cat | sha1sum;
+}
+
+dirhash2() {
+    find $1 -type f -print0 | sort -z | xargs -0 sha1sum | sha1sum;
+}
+
 complete -F _new-complete new
 
 bind '"\e[A"':history-search-backward
