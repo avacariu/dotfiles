@@ -292,14 +292,15 @@ jn() {
     local journal_filepath
     local cur_date
 
-    cur_date="$(date '+%Y-%m-%d %A')"
     mkdir -p ~/Documents/journal/{day,topic}
 
-    if [[ -n $1 ]]; then
-        journal_filepath=~/Documents/journal/topic/"$1".md
+    if [[ $1 = "topic" ]]; then
+        cur_date="$(date '+%Y-%m-%d %A')"
+        journal_filepath=~/Documents/journal/topic/"$2".md
 
         vim "+normal Go - ($cur_date) " +startinsert! "$journal_filepath"
     else
+        cur_date="$(date '+%Y-%m-%d %A' --date="$*")"
         journal_filepath=~/Documents/journal/day/"$cur_date".md
         vim "+normal Go" +startinsert "$journal_filepath"
     fi
