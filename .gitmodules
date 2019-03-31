@@ -172,9 +172,6 @@
 [submodule "vim/bundle/eink.vim"]
 	path = vim/bundle/eink.vim
 	url = https://bitbucket.org/kisom/eink.vim.git
-[submodule "vim/bundle/vim-colors-solarized"]
-	path = vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
