@@ -321,5 +321,10 @@ autocmd FileType htmldjango setlocal shiftwidth=2 softtabstop=2
 set foldlevel=1
 
 set pastetoggle=<leader>p
+
+function RandomLine()
+    :py3 import vim, random;
+        \ vim.current.window.cursor = (random.randint(1, len(vim.current.buffer)+1), 0)
+endfunction
 "}}}
 " vim:foldmethod=marker:foldlevel=0
