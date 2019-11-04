@@ -193,3 +193,6 @@
 [submodule "vim/bundle/Wombat"]
 	path = vim/bundle/Wombat
 	url = https://github.com/vim-scripts/Wombat.git
+[submodule "vim/bundle/vim-tmux-navigator"]
+	path = vim/bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
