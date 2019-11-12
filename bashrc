@@ -369,6 +369,10 @@ if [[ -d ~/.pyenv ]]; then
     eval "$(pyenv init -)"
 fi
 
+if [[ -f ~/.local/bin/register-python-argcomplete ]]; then
+    eval "$(register-python-argcomplete pipx)"
+fi
+
 
 # credit: https://unix.stackexchange.com/a/217223
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
