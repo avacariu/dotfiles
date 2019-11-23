@@ -40,8 +40,6 @@ for f in ~/.bashrc.d/*; do
 done
 
 
-complete -F _new-complete new
-
 bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 
