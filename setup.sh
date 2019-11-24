@@ -2,7 +2,12 @@
 
 dir=$(pwd)
 
-SYMLINK="ln -s -f -n"
+function symlink() {
+    local src="$1"
+    local tgt="$2"
+
+    ln -s -f -n "$src" "$tgt"
+}
 
 function install_pipx() {
     echo "Installing pipx"
@@ -16,19 +21,19 @@ function install_config_files() {
     echo "Moving any existing dotfiles from - to $olddir"
     for file in $files; do
 	echo "Creating symlink to $file in home directory."
-	$SYMLINK $dir/$file ~/.$file
+	symlink $dir/$file ~/.$file
     done
 
     echo "Copying i3 configs"
     mkdir -p ~/.config/{i3,i3status}
-    $SYMLINK $dir/i3/config ~/.config/i3/config
-    $SYMLINK $dir/i3status/config ~/.config/i3status/config
+    symlink $dir/i3/config ~/.config/i3/config
+    symlink $dir/i3status/config ~/.config/i3status/config
 }
 
 function install_bin() {
     echo "Setting up .local/bin"
     mkdir -p ~/.local/bin
-    $SYMLINK $dir/local/bin ~/.local/bin/dotfiles
+    symlink $dir/local/bin ~/.local/bin/dotfiles
 }
 
 function install_fonts() {
@@ -47,10 +52,21 @@ function install_fonts() {
 }
 
 function install() {
-    install_pipx
-    install_config_files
-    install_bin
-    install_fonts
+    echo "This script will not back-up anything. Do you wish to continue? (y/n)"
+    select yn in "Yes" "No"; do
+	case $yn in
+	    Yes)
+		install_pipx
+		install_config_files
+		install_bin
+		install_fonts
+		;;
+	    *)
+		echo "Exiting..."
+		;;
+	esac
+	break
+    done
 }
 
 install
