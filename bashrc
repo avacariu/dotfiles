@@ -40,7 +40,4 @@ for f in ~/.bashrc.d/*; do
 done
 
 source ~/.local/bin/bashmarks/bashmarks.sh
-source "$MODULESHOME"/init/bash 2>/dev/null
-source "$MODULESHOME"/init/bash_completion 2>/dev/null
-
 source ~/.bashrc_local 2>/dev/null
