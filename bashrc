@@ -39,37 +39,8 @@ for f in ~/.bashrc.d/*; do
     source "$f";
 done
 
-
-bind '"\e[A"':history-search-backward
-bind '"\e[B"':history-search-forward
-
-export DEBFULLNAME="Andrei Vacariu"
-export DEBEMAIL="andrei@avacariu.me"
-
-source ~/.local/bin/bashmarks.sh
+source ~/.local/bin/bashmarks/bashmarks.sh
 source "$MODULESHOME"/init/bash 2>/dev/null
 source "$MODULESHOME"/init/bash_completion 2>/dev/null
 
 source ~/.bashrc_local 2>/dev/null
-
-if [[ -d ~/.pyenv ]]; then
-    export PYENV_HOME="$HOME/.pyenv"
-    export PATH="$PYENV_HOME/bin:$PATH"
-
-    eval "$(pyenv init -)"
-fi
-
-if [[ -f ~/.local/bin/register-python-argcomplete ]]; then
-    eval "$(register-python-argcomplete pipx)"
-fi
-
-
-# credit: https://unix.stackexchange.com/a/217223
-if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-    if [[ -z $SSH_AUTH_SOCK ]]; then
-        eval "$(ssh-agent)"
-    fi
-    ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-fi
-
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
