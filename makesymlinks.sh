@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dir=$(pwd)
 olddir=$(pwd)/../dotfiles.bak
@@ -28,10 +28,6 @@ echo "Copying i3 configs"
 mkdir -p ~/.config/{i3,i3status}
 cp $dir/i3/config ~/.config/i3/config
 cp $dir/i3status/config ~/.config/i3status/config
-cp $dir/i3lock.sh ~/.local/bin/
-
-echo "Copying bashmarks to .local/bin"
-cp $dir/local/bin/bashmarks/bashmarks.sh ~/.local/bin/
 
 echo "Copying get-num-updates to .local/bin"
 cp $dir/local/bin/get-num-updates.sh ~/.local/bin/
