@@ -2,13 +2,14 @@
 all:
 	echo "update symlinks"
 
+.PHONY: update
 update:
 	git pull
 	# we need to ensure the URLs for the submodules are all correct, because
 	# sometimes they change (e.g. in python-mode's own submodules)
 	git submodule update --recursive --init --force
 	git submodule sync --recursive
-	bash ./makesymlinks.sh
+	bash ./setup.sh
 
 
 .PHONY: upgrade-submodules

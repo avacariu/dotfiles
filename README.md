@@ -3,32 +3,29 @@ About
 
 These are my dotfiles.
 
+Quickstart:
 
-Setting it up
-=============
+    git clone --recursive $URL
+    cd dotfiles
+    ./setup.sh
 
-* Pulling the repo
 
-        git clone --recursive
+Misc tips
+=========
 
 * If you forgot the --recursive (or if you just did a git pull and got new
   submodules, but need to update them)
 
         git submodule update --init
+        # OR
+        make update
 
-* To update the submodules
+* To upgrade the submodules
 
-        git submodule foreach git pull origin master
+        make upgrade-submodules
 
 * Git credential helper (gnome-keyring)
 
         sudo apt-get install libgnome-keyring-dev
         cd /usr/share/doc/git/contrib/credential/gnome-keyring
         sudo make
-
-Updating YouCompleteMe
-======================
-
-    cd vim/bundle/YouCompleteMe
-    git submodule update --init --recursive
-    python3 ./install.py --clang-completer
