@@ -8,5 +8,5 @@ for f in ~/.bashrc.d/*; do
     source "$f";
 done
 
-source ~/.local/bin/bashmarks/bashmarks.sh
+source ~/.local/bin/dotfiles/bashmarks/bashmarks.sh
 source ~/.bashrc_local 2>/dev/null
