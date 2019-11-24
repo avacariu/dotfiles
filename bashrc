@@ -4,7 +4,7 @@ case $- in
       *) return;;
 esac
 
-for f in ~/.bashrc.d/*; do
+for f in ~/.bashrc.d/???-*.sh; do
     source "$f";
 done
 
