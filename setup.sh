@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 
 dir=$(pwd)
+# It's way too difficult to handle edge cases where you end up putting things
+# within symlinks, so it's easier to just create a new directory for each
+# backup date.
+backupdir=$(pwd)/../dotfiles.bak/$(date "+%Y-%m-%d_%H-%M.%S")
+mkdir -p $backupdir
 
 function symlink() {
     local src="$1"
     local tgt="$2"
+
+    if [[ -f $tgt ]] || [[ -d $tgt ]]; then
+	mv $tgt $backupdir/$(basename "$tgt")
+    fi
 
     ln -s -f -n "$src" "$tgt"
 }
@@ -52,10 +61,11 @@ function install_fonts() {
 }
 
 function install() {
-    echo "This script will not back-up anything. Do you wish to continue? (y/n)"
+    echo "This script may have imperfect backups. Do you wish to continue?"
     select yn in "Yes" "No"; do
 	case $yn in
 	    Yes)
+		echo "Backup directory: $backupdir"
 		install_pipx
 		install_config_files
 		install_bin
