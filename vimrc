@@ -210,9 +210,6 @@ endfunction
 " use \s for spellcheck
 nnoremap \s a<C-X><C-S>
 
-" user CTRL-V to paste text while in insert mode
-inoremap <C-V> <ESC>"+pa
-
 " Use mouse for scrolling
 set mouse=a
 nmap <LeftMouse> <nop>
