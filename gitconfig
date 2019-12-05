@@ -1,7 +1,7 @@
 [push]
     default = simple
 [user]
-    email = andrei@avacariu.me
+    email = andrei@vacariu.ca
     name = Andrei Vacariu
 [core]
     editor = vim -c 'startinsert'
