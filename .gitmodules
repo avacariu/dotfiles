@@ -2,42 +2,52 @@
 	path = vim/pack/plugin-bundle/start/Align
 	url = https://github.com/vim-scripts/Align.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/CSApprox"]
 	path = vim/pack/plugin-bundle/start/CSApprox
 	url = https://github.com/vim-scripts/CSApprox.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/pack/plugin-bundle/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/tabular"]
 	path = vim/pack/plugin-bundle/start/tabular
 	url = https://github.com/godlygeek/tabular.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-puppet"]
 	path = vim/pack/plugin-bundle/start/vim-puppet
 	url = https://github.com/rodjek/vim-puppet.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/pack/plugin-bundle/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-surround"]
 	path = vim/pack/plugin-bundle/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/nerdtree"]
 	path = vim/pack/plugin-bundle/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-characterize"]
 	path = vim/pack/plugin-bundle/start/vim-characterize
 	url = https://github.com/tpope/vim-characterize.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-speeddating"]
 	path = vim/pack/plugin-bundle/start/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/snipMate"]
 	path = vim/pack/plugin-bundle/start/snipMate
 	url = https://github.com/msanders/snipmate.vim.git
@@ -46,152 +56,193 @@
 	path = vim/pack/plugin-bundle/start/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/syntastic"]
 	path = vim/pack/plugin-bundle/start/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-multiple-cursors"]
 	path = vim/pack/plugin-bundle/start/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/gundo.vim"]
 	path = vim/pack/plugin-bundle/start/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/rust.vim"]
 	path = vim/pack/plugin-bundle/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
 	ignore = dirty
+	branch = master
 [submodule "local/bin/bashmarks"]
 	path = local/bin/bashmarks
 	url = https://github.com/huyng/bashmarks.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-localrc"]
 	path = vim/pack/plugin-bundle/start/vim-localrc
 	url = https://github.com/thinca/vim-localrc.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-javascript"]
 	path = vim/pack/plugin-bundle/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-airline"]
 	path = vim/pack/plugin-bundle/start/vim-airline
 	url = https://github.com/bling/vim-airline
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/pack/plugin-bundle/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/AutoClose"]
 	path = vim/bundle/AutoClose
 	url = https://github.com/vim-scripts/AutoClose.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-toml"]
 	path = vim/pack/plugin-bundle/start/vim-toml
 	url = https://github.com/cespare/vim-toml.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/Smooth-Scroll"]
 	path = vim/pack/plugin-bundle/start/Smooth-Scroll
 	url = https://github.com/vim-scripts/Smooth-Scroll.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-qml"]
 	path = vim/pack/plugin-bundle/start/vim-qml
 	url = https://github.com/peterhoeg/vim-qml.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-jinja"]
 	path = vim/pack/plugin-bundle/start/vim-jinja
 	url = https://github.com/avacariu/vim-jinja.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-git"]
 	path = vim/pack/plugin-bundle/start/vim-git
 	url = https://github.com/tpope/vim-git.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/pack/plugin-bundle/start/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-unimpaired"]
 	path = vim/pack/plugin-bundle/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-rsi"]
 	path = vim/pack/plugin-bundle/start/vim-rsi
 	url = https://github.com/tpope/vim-rsi.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-abolish"]
 	path = vim/pack/plugin-bundle/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-sleuth"]
 	path = vim/pack/plugin-bundle/start/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-capslock"]
 	path = vim/pack/plugin-bundle/start/vim-capslock
 	url = https://github.com/tpope/vim-capslock.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-virtualenv"]
 	path = vim/pack/plugin-bundle/start/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/Colorizer"]
 	path = vim/pack/plugin-bundle/start/Colorizer
 	url = https://github.com/chrisbra/Colorizer.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/dockerfile.vim"]
 	path = vim/pack/plugin-bundle/start/dockerfile.vim
 	url = https://github.com/avacariu/dockerfile.vim.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/python_match.vim"]
 	path = vim/pack/plugin-bundle/start/python_match.vim
 	url = https://github.com/vim-scripts/python_match.vim
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/ag.vim"]
 	path = vim/pack/plugin-bundle/start/ag.vim
 	url = https://github.com/rking/ag.vim
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/pack/plugin-bundle/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/julia-vim"]
 	path = vim/pack/plugin-bundle/start/julia-vim
 	url = https://github.com/JuliaLang/julia-vim.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/vim-scala"]
 	path = vim/pack/plugin-bundle/start/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
 	ignore = dirty
+	branch = master
 [submodule "vim/bundle/undotree"]
 	path = vim/pack/plugin-bundle/start/undotree
 	url = https://github.com/mbbill/undotree.git
+	branch = master
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/pack/plugin-bundle/start/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+	branch = master
 [submodule "vim/bundle/vimtex"]
 	path = vim/pack/plugin-bundle/start/vimtex
 	url = https://github.com/lervag/vimtex.git
+	branch = master
 [submodule "vim/bundle/vim-schlepp"]
 	path = vim/pack/plugin-bundle/start/vim-schlepp
 	url = https://github.com/zirrostig/vim-schlepp.git
+	branch = master
 [submodule "vim/bundle/vim-airline-themes"]
 	path = vim/pack/plugin-bundle/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+	branch = master
 [submodule "vim/bundle/acme-colors"]
 	path = vim/pack/plugin-bundle/start/acme-colors
 	url = https://github.com/plan9-for-vimspace/acme-colors.git
+	branch = master
 [submodule "vim/bundle/linediff.vim"]
 	path = vim/pack/plugin-bundle/start/linediff.vim
 	url = https://github.com/AndrewRadev/linediff.vim.git
+	branch = master
 [submodule "vim/bundle/python-mode"]
 	path = vim/pack/plugin-bundle/start/python-mode
 	url = https://github.com/python-mode/python-mode.git
+	branch = develop
 [submodule "vim/bundle/Wombat"]
 	path = vim/pack/plugin-bundle/start/Wombat
 	url = https://github.com/vim-scripts/Wombat.git
+	branch = master
 [submodule "vim/bundle/vim-tmux-navigator"]
 	path = vim/pack/plugin-bundle/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+	branch = master
 [submodule "vim/bundle/papercolor-theme"]
 	path = vim/pack/plugin-bundle/start/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme.git
+	branch = master
