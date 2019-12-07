@@ -1,7 +1,7 @@
 " Plugins {{{
 set nocompatible  " Needed for pathogen to work
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime pack/plugin-bundle/start/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
