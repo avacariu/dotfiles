@@ -7,8 +7,8 @@ update:
 	git pull
 	# we need to ensure the URLs for the submodules are all correct, because
 	# sometimes they change (e.g. in python-mode's own submodules)
-	git submodule update --recursive --init --force
 	git submodule sync --recursive
+	git submodule update --recursive --init --force
 	bash ./setup.sh
 
 
