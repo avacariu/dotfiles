@@ -48,10 +48,6 @@
 	url = https://github.com/tpope/vim-speeddating.git
 	ignore = dirty
 	branch = master
-[submodule "vim/bundle/snipMate"]
-	path = vim/pack/plugin-bundle/start/snipMate
-	url = https://github.com/msanders/snipmate.vim.git
-	ignore = dirty
 [submodule "vim/bundle/vim-trailing-whitespace"]
 	path = vim/pack/plugin-bundle/start/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
