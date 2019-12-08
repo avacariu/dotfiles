@@ -1,14 +1,17 @@
 " Code taken from https://github.com/chrisjohnson/vim8-bracketed-paste-mode-tmux/blob/master/plugin/vim8-bracketed-paste-tmux.vim
 " Discussion: https://github.com/ConradIrwin/vim-bracketed-paste/issues/32
 
-let s:screen  = &term =~ 'screen'
+
+" NOTE: iTerm2 will show up as xterm-256color, and tmux shows up as
+" screen-256color. We want to avoid using this on xterm because it leads to
+" lag when hitting <ESC> (it takes about a second to get into NORMAL mode).
+let s:screen = &term =~ 'screen'
 let s:tmux = &term =~ 'tmux'
-let s:xterm   = &term =~ 'xterm'
 
 " make use of Xterm "bracketed paste mode"
 " http://www.xfree86.org/current/ctlseqs.html#Bracketed%20Paste%20Mode
 " http://stackoverflow.com/questions/5585129
-if s:screen || s:xterm || s:tmux
+if s:screen || s:tmux
   function! s:BeginXTermPaste(ret)
     set paste
     return a:ret
