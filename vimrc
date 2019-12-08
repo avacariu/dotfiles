@@ -177,7 +177,7 @@ nmap j gj
 nmap k gk
 
 " set gundo to use F5
-nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " edit all buffers using current files (reload)
 map <Leader>ge :windo e!<CR>
