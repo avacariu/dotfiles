@@ -70,6 +70,8 @@ let g:pymode_rope_rename_bind = '<Leader>pr'
 let g:pymode_rope_organize_imports_bind = '<Leader>poi'
 let g:pymode_rope_autoimport_bind = '<Leader>pi'
 let g:pymode_rope_extract_method_bind = '<Leader>pem'
+
+let g:netrw_liststyle = 3
 " }}}
 " Spaces & Tabs {{{
 " Use spaces instead of tabs
@@ -185,8 +187,6 @@ map <Leader>ge :windo e!<CR>
 " switch buffers with Tab and S-Tab
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
-
-nmap <Leader>e :NERDTreeToggle<CR>
 
 nnoremap <Leader>q :q<CR>
 

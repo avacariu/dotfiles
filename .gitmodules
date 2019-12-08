@@ -33,11 +33,6 @@
 	url = https://github.com/tpope/vim-surround.git
 	ignore = dirty
 	branch = master
-[submodule "vim/bundle/nerdtree"]
-	path = vim/pack/plugin-bundle/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-	ignore = dirty
-	branch = master
 [submodule "vim/bundle/vim-characterize"]
 	path = vim/pack/plugin-bundle/start/vim-characterize
 	url = https://github.com/tpope/vim-characterize.git
@@ -240,4 +235,8 @@
 [submodule "vim/pack/plugin-bundle/start/vim-ledger"]
 	path = vim/pack/plugin-bundle/start/vim-ledger
 	url = https://github.com/ledger/vim-ledger.git
+	branch = master
+[submodule "vim/pack/plugin-bundle/start/vim-vinegar"]
+	path = vim/pack/plugin-bundle/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
 	branch = master
