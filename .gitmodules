@@ -237,3 +237,7 @@
 	path = vim/pack/plugin-bundle/start/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme.git
 	branch = master
+[submodule "vim/pack/plugin-bundle/start/vim-ledger"]
+	path = vim/pack/plugin-bundle/start/vim-ledger
+	url = https://github.com/ledger/vim-ledger.git
+	branch = master
