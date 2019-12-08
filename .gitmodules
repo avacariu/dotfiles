@@ -63,11 +63,6 @@
 	url = https://github.com/terryma/vim-multiple-cursors
 	ignore = dirty
 	branch = master
-[submodule "vim/bundle/gundo.vim"]
-	path = vim/pack/plugin-bundle/start/gundo.vim
-	url = https://github.com/sjl/gundo.vim.git
-	ignore = dirty
-	branch = master
 [submodule "vim/bundle/rust.vim"]
 	path = vim/pack/plugin-bundle/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
