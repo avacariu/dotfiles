@@ -301,6 +301,10 @@ set ffs=unix,dos,mac
 
 " Save swap file every 10 characters types
 set updatecount=10
+
+" Don't auto-insert completion options, and show a menu even if there's only
+" one item
+set completeopt=menuone,noinsert
 " }}}
 " Misc {{{
 " shortcut to cd to the current file's dir
