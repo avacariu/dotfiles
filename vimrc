@@ -71,7 +71,6 @@ let g:pymode_rope_organize_imports_bind = '<Leader>poi'
 let g:pymode_rope_autoimport_bind = '<Leader>pi'
 let g:pymode_rope_extract_method_bind = '<Leader>pem'
 
-let g:netrw_liststyle = 3
 let g:netrw_altfile = 1
 " }}}
 " Spaces & Tabs {{{
