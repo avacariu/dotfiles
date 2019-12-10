@@ -12,3 +12,5 @@ if [[ ! $OSTYPE =~ darwin* ]]; then
     export HISTSIZE=-1
     unset HISTFILESIZE
 fi
+
+HISTTIMEFORMAT="%F %T "
