@@ -29,3 +29,13 @@ Misc tips
         sudo apt-get install libgnome-keyring-dev
         cd /usr/share/doc/git/contrib/credential/gnome-keyring
         sudo make
+
+
+Setting up muttrc password
+==========================
+
+```
+echo 'set imap_pass="XXX"' > ~/.muttrc.password
+gpg -r andrei@vacariu.ca -e ~/.muttrc.password   # output ~/.muttrc.password.gpg
+rm ~/.muttrc.password
+```

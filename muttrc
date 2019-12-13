@@ -1,0 +1,36 @@
+set realname = "Andrei Vacariu"
+
+set imap_user = 'andrei@avacariu.me'
+source "gpg -d ~/.muttrc.password.gpg |"
+
+set folder = 'imaps://imap.gmail.com/'
+set spoolfile = '+INBOX'
+#set record = '+[Gmail]/Sent Mail'
+set postponed = '+[Gmail]/Drafts'
+
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+set smtp_url = "smtp://$imap_user@smtp.gmail.com:587/"
+set smtp_pass = "$imap_pass"
+set record=''
+
+set mbox = 'imaps://imap.gmail.com/[Gmail]/All Mail'
+set trash = 'imaps://imap.gmail.com/[Gmail]/Trash'
+
+bind editor <space> noop
+bind index g noop
+macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive"
+macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter>" "Trash"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+
+set sort = reverse-date
+
+bind pager <up> previous-line #scroll inside the message rather than the index
+bind pager <down> next-line
+
+set smart_wrap
+set text_flowed
