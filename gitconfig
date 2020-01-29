@@ -27,4 +27,4 @@
 [pager]
     status = true
 [includeIf "gitdir:~/dev/"]
-    path = ~/dev/.gitconfig
+    path = ~/dev/gitconfig
