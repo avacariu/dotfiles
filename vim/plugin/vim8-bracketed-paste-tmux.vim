@@ -1,3 +1,4 @@
+" This is largely pieced together from a few different places.
 " Code taken from https://github.com/chrisjohnson/vim8-bracketed-paste-mode-tmux/blob/master/plugin/vim8-bracketed-paste-tmux.vim
 " Discussion: https://github.com/ConradIrwin/vim-bracketed-paste/issues/32
 
@@ -23,10 +24,14 @@ if s:screen || s:tmux
   " disable bracketed paste mode on leaving Vim
   let &t_te = "\e[?2004l" . &t_te
 
-  set pastetoggle=<Esc>[201~
-  inoremap <expr> <Esc>[200~ <SID>BeginXTermPaste("")
-  nnoremap <expr> <Esc>[200~ <SID>BeginXTermPaste("i")
-  vnoremap <expr> <Esc>[200~ <SID>BeginXTermPaste("c")
-  cnoremap <Esc>[200~ <nop>
-  cnoremap <Esc>[201~ <nop>
+  execute "set <f28>=\<Esc>[200~"
+  execute "set <f29>=\<Esc>[201~"
+
+  " TODO: pastetoggle isn't getting triggered
+  set pastetoggle=<f29>
+  inoremap <expr> <f28> <SID>BeginXTermPaste("")
+  nnoremap <expr> <f28> <SID>BeginXTermPaste("i")
+  vnoremap <expr> <f28> <SID>BeginXTermPaste("c")
+  cnoremap <f28> <nop>
+  cnoremap <f29> <nop>
 endif
