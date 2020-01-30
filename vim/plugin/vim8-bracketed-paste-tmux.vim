@@ -27,8 +27,9 @@ if s:screen || s:tmux
   execute "set <f28>=\<Esc>[200~"
   execute "set <f29>=\<Esc>[201~"
 
-  " TODO: pastetoggle isn't getting triggered
-  set pastetoggle=<f29>
+  " XXX: this pastetoggle can't be <f29> or else it won't get triggered!
+  set pastetoggle=\<ESC>[201~
+
   inoremap <expr> <f28> <SID>BeginXTermPaste("")
   nnoremap <expr> <f28> <SID>BeginXTermPaste("i")
   vnoremap <expr> <f28> <SID>BeginXTermPaste("c")
