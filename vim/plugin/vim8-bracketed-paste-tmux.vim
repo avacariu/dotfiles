@@ -1,6 +1,15 @@
-" This is largely pieced together from a few different places.
-" Code taken from https://github.com/chrisjohnson/vim8-bracketed-paste-mode-tmux/blob/master/plugin/vim8-bracketed-paste-tmux.vim
-" Discussion: https://github.com/ConradIrwin/vim-bracketed-paste/issues/32
+" This is largely pieced together from a few different places:
+" - https://github.com/chrisjohnson/vim8-bracketed-paste-mode-tmux/blob/master/plugin/vim8-bracketed-paste-tmux.vim
+" - https://github.com/ConradIrwin/vim-bracketed-paste/issues/32
+" - http://stackoverflow.com/questions/5585129
+"
+" Some changes have been from the above sources to make it more reliable:
+" - ensure <f28> and <f29> are used instead of \<ESC> prefixes because
+"   otherwise Vim will wait for the rest of the characters when you try to hit
+"   ESC to get out of insert mode.
+" - don't set pastetoggle to <f29> or else it won't trigger.
+" - pastetoggle can use the \<ESC> prefix without a lag, because the lag only
+"   shows up in a mapping
 
 
 " NOTE: iTerm2 will show up as xterm-256color, and tmux shows up as
