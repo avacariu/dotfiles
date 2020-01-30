@@ -72,6 +72,10 @@ let g:pymode_rope_autoimport_bind = '<Leader>pi'
 let g:pymode_rope_extract_method_bind = '<Leader>pem'
 
 let g:netrw_altfile = 1
+
+" this ensures the netrw buffer gets closed when you open a file from it
+" See: https://github.com/tpope/vim-vinegar/issues/13
+let g:netrw_fastbrowse = 0
 " }}}
 " Spaces & Tabs {{{
 " Use spaces instead of tabs
