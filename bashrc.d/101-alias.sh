@@ -1,8 +1,8 @@
 # vim: let b:is_bash = 1
 # some more ls aliases
-alias ll='ls -alf'
+alias ll='ls -lah'
 alias la='ls -a'
-alias l='ls -cf'
+alias l='ls -c'
 alias sl='ls'
 
 alias cd..="cd .."
