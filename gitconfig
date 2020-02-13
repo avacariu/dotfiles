@@ -13,6 +13,7 @@
 [alias]
     st = status
     ci = commit
+    cpr = "!f() { git fetch origin refs/pull/$1/head && git checkout FETCH_HEAD; }; f"
     lg = log -p
     lo = log --oneline
     who = shortlog -s --
