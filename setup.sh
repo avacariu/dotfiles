@@ -25,7 +25,7 @@ function install_pipx() {
 }
 
 function install_config_files() {
-    files="bashrc vimrc vim bashrc.d gitconfig gitignore irssi tmux.conf latexmkrc muttrc"
+    files="bashrc inputrc vimrc vim bashrc.d gitconfig gitignore irssi tmux.conf latexmkrc muttrc"
 
     echo "Moving any existing dotfiles from - to $olddir"
     for file in $files; do
