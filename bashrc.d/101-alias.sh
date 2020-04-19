@@ -5,6 +5,9 @@ alias la='ls -a'
 alias l='ls -c'
 alias sl='ls'
 
+# this ensures bc always starts with scale=20
+alias bc='bc -l'
+
 alias cd..="cd .."
 alias ..="cd .."
 alias psg="ps aux | grep"
