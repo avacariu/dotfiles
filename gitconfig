@@ -1,5 +1,7 @@
 [push]
     default = simple
+[pull]
+    ff = only
 [user]
     email = andrei@vacariu.ca
     name = Andrei Vacariu
