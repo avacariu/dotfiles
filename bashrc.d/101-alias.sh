@@ -33,3 +33,9 @@ alias sshfs-reconnect="sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCoun
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+if [[ $OSTYPE =~ darwin* ]]; then
+    alias o='open'
+else
+    alias o='xdg-open'
+fi
