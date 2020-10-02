@@ -134,7 +134,7 @@ jn() {
 }
 
 get-gitignore() {
-    curl "https://www.gitignore.io/api/c%2Cvim%2Cpython" > .gitignore
+    curl -L "https://www.gitignore.io/api/c%2Cvim%2Cpython" > .gitignore
 }
 
 new-repo() {
