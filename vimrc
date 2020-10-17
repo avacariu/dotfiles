@@ -165,16 +165,12 @@ if &term =~ '256color'
 endif
 " }}}
 " Maps and Movement {{{
-imap jj <Esc>
 
 " Use w!! to write as root (when you forgot to sudo vim filename)
 cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
 
 " Shortcut to clear search highlights
 nmap <silent> <BS>  :nohlsearch<CR>
-
-" Make Y consistent with C and D. See :help Y.
-nnoremap Y y$
 
 " Let j/k behave like other editors (if a line is split, don't skip
 " to the next line)
@@ -227,8 +223,6 @@ map n nzz
 " Scroll horizontally by 1 column at a time (default is 0 which means to center
 " the cursor when moving past the edge of the screen)
 set sidescroll=1
-
-nnoremap <Leader>gb :Gblame<CR>
 
 " Use ctrl-{hjkl} to switch panes
 nnoremap <C-J> <C-W><C-J>
