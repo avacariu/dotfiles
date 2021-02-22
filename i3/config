@@ -181,18 +181,33 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-bindsym XF86MonBrightnessUp exec --no-startup-id gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepUp
-bindsym XF86MonBrightnessDown exec --no-startup-id gdbus call --session --dest org.gnome.SettingsDaemon.Power --object-path /org/gnome/SettingsDaemon/Power --method org.gnome.SettingsDaemon.Power.Screen.StepDown
+# XXX: you need to create an xorg.conf file for this to work:
+# /etc/X11/xorg.conf.d/20-intel.conf
+# Section "Device"
+#     Identifier  "Intel Graphics"
+#     Driver      "intel"
+#     Option      "Backlight"  "intel_backlight"
+# EndSection
+# SRC: https://wiki.archlinux.org/index.php/backlight#xbacklight
+# this works more smoothly than backlightctl, and can't use gnome service
+# without starting a gnome session, and I'm not sure how to handle that
+# properly
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
-bindsym control+mod1+l exec $HOME/.local/bin/i3lock.sh immediate
+bindsym control+mod1+l exec $HOME/.local/bin/dotfiles/i3lock.sh immediate
 
-exec --no-startup-id xautolock -time 5 -locker "~/.local/bin/i3lock.sh" -detectsleep -corners -000
+exec --no-startup-id xautolock -time 5 -locker "~/.local/bin/dotfiles/i3lock.sh" -detectsleep -corners -000
+# TODO: there's probably a better place to put this
+exec --no-startup-id setxkbmap -option ctrl:nocaps
 
 exec --no-startup-id nm-applet
+# TODO: I can't figure out an alternative to gnome-screensaver. Using i3lock
+# requires writing a systemd unit that runs on suspend, but that'd break
+# regular gnome sessions and I'd rather not do that
 exec --no-startup-id gnome-screensaver
 exec --no-startup-id redshift-gtk
 exec --no-startup-id dropbox start
-exec --no-startup-id unity-settings-daemon
-exec --no-startup-id mpd
+exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id xsetroot -solid "#111"
 exec --no-startup-id feh --bg-fill $HOME/Pictures/wallpapers/laptop-wallpaper.jpg
