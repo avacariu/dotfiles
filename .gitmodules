@@ -13,11 +13,6 @@
 	url = https://github.com/godlygeek/tabular.git
 	ignore = dirty
 	branch = master
-[submodule "vim/bundle/vim-puppet"]
-	path = vim/pack/plugin-bundle/start/vim-puppet
-	url = https://github.com/rodjek/vim-puppet.git
-	ignore = dirty
-	branch = master
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/pack/plugin-bundle/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
@@ -46,11 +41,6 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/pack/plugin-bundle/start/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-	ignore = dirty
-	branch = master
-[submodule "vim/bundle/vim-multiple-cursors"]
-	path = vim/pack/plugin-bundle/start/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors
 	ignore = dirty
 	branch = master
 [submodule "vim/bundle/rust.vim"]
@@ -203,14 +193,6 @@
 	path = vim/pack/plugin-bundle/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
 	branch = master
-[submodule "vim/bundle/acme-colors"]
-	path = vim/pack/plugin-bundle/start/acme-colors
-	url = https://github.com/plan9-for-vimspace/acme-colors.git
-	branch = master
-[submodule "vim/bundle/linediff.vim"]
-	path = vim/pack/plugin-bundle/start/linediff.vim
-	url = https://github.com/AndrewRadev/linediff.vim.git
-	branch = master
 [submodule "vim/bundle/python-mode"]
 	path = vim/pack/plugin-bundle/opt/python-mode
 	url = https://github.com/python-mode/python-mode.git
@@ -222,10 +204,6 @@
 [submodule "vim/bundle/vim-tmux-navigator"]
 	path = vim/pack/plugin-bundle/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
-	branch = master
-[submodule "vim/bundle/papercolor-theme"]
-	path = vim/pack/plugin-bundle/start/papercolor-theme
-	url = https://github.com/NLKNguyen/papercolor-theme.git
 	branch = master
 [submodule "vim/pack/plugin-bundle/start/vim-ledger"]
 	path = vim/pack/plugin-bundle/start/vim-ledger
