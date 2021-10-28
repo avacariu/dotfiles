@@ -43,8 +43,6 @@ let g:ctrlp_user_command = {
 " file searching.
 let g:ctrlp_cmd = 'CtrlPMixed'
 
-let g:gundo_prefer_python3 = 1
-
 let g:tex_flavor='latex'
 
 " Syntastic related stuff
