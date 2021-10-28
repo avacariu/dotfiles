@@ -85,27 +85,6 @@ set tabstop=4     " How many columns a tab counts for
 set softtabstop=4 " How many columns vim uses when you hit tab in insert mode.
 " }}}
 " UI {{{
-if has("gui_running")
-    if has("gui_gtk2")
-        set guifont=Ubuntu\ Mono\ 12
-        set guioptions-=T   " toolbar
-        set guioptions-=r   " right scrollbar
-
-        " the powerline font is partially messed up in gvim
-        if !exists('g:airline_symbols')
-            let g:airline_symbols = {}
-        endif
-        let g:airline_symbols.space = "\u3000"
-
-        set lines=35 columns=85
-
-    elseif has("gui_macvim")
-        set guifont=Consolas:h12
-    elseif has("gui_win32")
-        set guifont=Consolas:h11
-    endif
-endif
-
 " Send more characters to the screen for redrawing, instead of using
 " insert/delete line commands
 set ttyfast
