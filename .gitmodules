@@ -38,11 +38,6 @@
 	url = https://github.com/bronson/vim-trailing-whitespace.git
 	ignore = dirty
 	branch = master
-[submodule "vim/bundle/syntastic"]
-	path = vim/pack/plugin-bundle/start/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-	ignore = dirty
-	branch = master
 [submodule "vim/bundle/rust.vim"]
 	path = vim/pack/plugin-bundle/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git

@@ -45,24 +45,6 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 
 let g:tex_flavor='latex'
 
-" Syntastic related stuff
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" let python-mode handle this since syntastic wants pylint to be installed in
-" $PATH
-let g:syntastic_ignore_files = ['\.py$']
-
-" These might get disabled by YCM
-let g:syntastic_cpp_checkers = ['gcc']
-let g:syntastic_c_checkers = ['gcc']
-
 let g:pymode_rope_goto_definition_bind = '<Leader>pd'
 let g:pymode_rope_rename_bind = '<Leader>pr'
 let g:pymode_rope_organize_imports_bind = '<Leader>poi'
