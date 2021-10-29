@@ -5,18 +5,22 @@ runtime pack/plugin-bundle/start/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+packadd! python-mode
+
 let g:pymode_python = 'python3'
 
-let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe']
+let g:pymode_lint = 0
 let g:pymode_rope = 0
-
-" Ignore 'line too long' messages. I can't always make the line shorter, and it
-" distracts from other messages. Plus, I already use colorcolumn.
-let g:pymode_lint_ignore = ['E501', 'E741', 'C901']
 
 " Modify the default regex to also include cpdef / cdef in Cython
 let g:pymode_folding_regex = '^\s*\%(class\|\(c\|cp\)\=def\|async\s\+def\) .\+\(:\s\+\w\)\@!'
 let g:pymode_folding = 0
+
+let g:pymode_rope_goto_definition_bind = '<Leader>pd'
+let g:pymode_rope_rename_bind = '<Leader>pr'
+let g:pymode_rope_organize_imports_bind = '<Leader>poi'
+let g:pymode_rope_autoimport_bind = '<Leader>pi'
+let g:pymode_rope_extract_method_bind = '<Leader>pem'
 
 " autoclose preview window (the place the help text is shown when
 " autocompleting python methods)
@@ -44,12 +48,6 @@ let g:ctrlp_user_command = {
 let g:ctrlp_cmd = 'CtrlPMixed'
 
 let g:tex_flavor='latex'
-
-let g:pymode_rope_goto_definition_bind = '<Leader>pd'
-let g:pymode_rope_rename_bind = '<Leader>pr'
-let g:pymode_rope_organize_imports_bind = '<Leader>poi'
-let g:pymode_rope_autoimport_bind = '<Leader>pi'
-let g:pymode_rope_extract_method_bind = '<Leader>pem'
 
 let g:netrw_altfile = 1
 
