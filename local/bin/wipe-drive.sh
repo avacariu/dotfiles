@@ -11,7 +11,7 @@ echo "Mapper /dev/mapper/$mappername"
 cryptsetup luksFormat "$device"
 cryptsetup luksOpen "$device" "$mappername"
 
-num_bytes=$(blockdev --getsize64 /dev/sdc)
+num_bytes=$(blockdev --getsize64 $device)
 pv --size $num_bytes --stop-at-size \
 	< /dev/zero \
 	> "/dev/mapper/$mappername"
