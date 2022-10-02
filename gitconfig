@@ -35,3 +35,5 @@
     status = true
 [includeIf "gitdir:~/dev/"]
     path = ~/dev/gitconfig
+[init]
+	defaultBranch = main
