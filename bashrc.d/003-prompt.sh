@@ -30,12 +30,15 @@ if [ "$color_prompt" = yes ]; then
     PS1="$PS1"'${debian_chroot:+($debian_chroot)}'
     PS1="$PS1"'\[\e[01m\e[38;5;10m\]\u@\h\[\e[0m\]'
     PS1="$PS1"':\[\e[01m\e[38;5;12m\]\w\[\e[0m\]'
-    PS1="$PS1"'\[\e[01m\e[38;5;10m\]$(declare -F __git_ps1 &>/dev/null && __git_ps1 " (%s)")\[\e[0m\]'
-    PS1="$PS1"'\n\[\e[1;35m\]\$ \[\e[0m\]'
+    PS1="$PS1"'\[\e[01m\e[38;5;10m\]$(declare -F __git_ps1 &>/dev/null && __git_ps1 " (%s)")\[\e[0m\]\n'
+    #PS1="$PS1"'\n\[\e[1;35m\]\$ \[\e[0m\]'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w \$ '
 fi
 unset color_prompt force_color_prompt
+
+bind 'set vi-ins-mode-string "\1\e[1;35m\2$\1\e[0m\2 "'
+bind 'set vi-cmd-mode-string "\1\e[1;35m\2:\1\e[0m\2 "'
 
 # Shorten the promt so it only shows ~/.../dir2/dir2$
 export PROMPT_DIRTRIM=2
