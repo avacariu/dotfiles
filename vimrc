@@ -5,22 +5,13 @@ runtime pack/plugin-bundle/start/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-packadd! python-mode
+let g:ale_linters = {'python': ['jedils', 'pylint']}
+let g:ale_floating_preview = 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
-let g:pymode_python = 'python3'
-
-let g:pymode_lint = 0
-let g:pymode_rope = 0
-
-" Modify the default regex to also include cpdef / cdef in Cython
-let g:pymode_folding_regex = '^\s*\%(class\|\(c\|cp\)\=def\|async\s\+def\) .\+\(:\s\+\w\)\@!'
-let g:pymode_folding = 0
-
-let g:pymode_rope_goto_definition_bind = '<Leader>pd'
-let g:pymode_rope_rename_bind = '<Leader>pr'
-let g:pymode_rope_organize_imports_bind = '<Leader>poi'
-let g:pymode_rope_autoimport_bind = '<Leader>pi'
-let g:pymode_rope_extract_method_bind = '<Leader>pem'
+nmap <leader>gd :ALEGoToDefinition<CR>
+nmap <leader>gr :ALEFindReferences<CR>
+autocmd Filetype python nmap K :ALEHover<CR>
 
 " autoclose preview window (the place the help text is shown when
 " autocompleting python methods)

@@ -178,10 +178,6 @@
 	path = vim/pack/plugin-bundle/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
 	branch = master
-[submodule "vim/bundle/python-mode"]
-	path = vim/pack/plugin-bundle/opt/python-mode
-	url = https://github.com/python-mode/python-mode.git
-	branch = develop
 [submodule "vim/bundle/Wombat"]
 	path = vim/pack/plugin-bundle/start/Wombat
 	url = https://github.com/vim-scripts/Wombat.git
@@ -201,3 +197,6 @@
 [submodule "vim/pack/plugin-bundle/start/ale"]
 	path = vim/pack/plugin-bundle/start/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "vim/pack/plugin-bundle/start/vim-pythonsense"]
+	path = vim/pack/plugin-bundle/start/vim-pythonsense
+	url = https://github.com/jeetsukumaran/vim-pythonsense.git
