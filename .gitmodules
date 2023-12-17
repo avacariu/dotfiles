@@ -128,11 +128,6 @@
 	url = https://github.com/jmcantrell/vim-virtualenv.git
 	ignore = dirty
 	branch = master
-[submodule "vim/bundle/Colorizer"]
-	path = vim/pack/plugin-bundle/start/Colorizer
-	url = https://github.com/chrisbra/Colorizer.git
-	ignore = dirty
-	branch = master
 [submodule "vim/bundle/dockerfile.vim"]
 	path = vim/pack/plugin-bundle/start/dockerfile.vim
 	url = https://github.com/avacariu/dockerfile.vim.git
@@ -200,3 +195,9 @@
 [submodule "vim/pack/plugin-bundle/start/vim-pythonsense"]
 	path = vim/pack/plugin-bundle/start/vim-pythonsense
 	url = https://github.com/jeetsukumaran/vim-pythonsense.git
+[submodule "vim/pack/plugin-bundle/start/python-syntax"]
+	path = vim/pack/plugin-bundle/start/python-syntax
+	url = https://github.com/vim-python/python-syntax.git
+[submodule "vim/pack/plugin-bundle/start/vim-python-pep8-indent"]
+	path = vim/pack/plugin-bundle/start/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent.git
