@@ -14,7 +14,8 @@ cryptsetup luksOpen "$device" "$mappername"
 num_bytes=$(blockdev --getsize64 $device)
 pv --size $num_bytes --stop-at-size \
 	< /dev/zero \
-	> "/dev/mapper/$mappername"
+	> "/dev/mapper/$mappername" \
+	|| true
 
 cryptsetup luksClose "/dev/mapper/$mappername"
 dd if=/dev/urandom of=$device bs=512 count=2056
