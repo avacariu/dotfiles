@@ -9,7 +9,11 @@
     editor = vim -c 'startinsert'
     excludesfile = ~/.gitignore
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
+[rebase]
+    autosquash = true
+[diff]
+    algorithm = histogram
 [credential]
     helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
 [alias]
@@ -37,3 +41,9 @@
     path = ~/dev/gitconfig
 [init]
 	defaultBranch = main
+[transfer]
+	fsckobjects = true
+[fetch]
+	fsckobjects = true
+[receive]
+	fsckobjects = true
