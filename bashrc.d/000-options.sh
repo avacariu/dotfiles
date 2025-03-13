@@ -2,7 +2,6 @@
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-shopt -s nullglob
 shopt -s globstar
 
 set -o vi
