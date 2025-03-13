@@ -1,0 +1,7 @@
+[window]
+dimensions = { columns = 140, lines = 50 }
+
+[keyboard]
+bindings = [
+   { key = "n", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
