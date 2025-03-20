@@ -1,4 +1,8 @@
 " Plugins {{{
+" This needs to be at the top to ensure the ftplugin loads before the syntax
+" rules (which is necessary for vim-ledger).
+filetype plugin indent on
+
 set nocompatible  " Needed for pathogen to work
 
 runtime pack/plugin-bundle/start/vim-pathogen/autoload/pathogen.vim
@@ -201,7 +205,6 @@ set hlsearch
 syntax enable
 
 set autoindent
-filetype plugin indent on
 
 " Don't highlight syntax past this column
 set synmaxcol=196
