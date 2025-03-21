@@ -9,8 +9,10 @@ runtime pack/plugin-bundle/start/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+let g:ale_python_auto_uv = 1
 let g:ale_linters = {'python': ['jedils', 'pylint']}
 let g:ale_floating_preview = 1
+let g:ale_virtualtext_cursor = 0
 let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
 nmap <leader>gd :ALEGoToDefinition<CR>
