@@ -17,6 +17,8 @@ let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
 nmap <leader>gd :ALEGoToDefinition<CR>
 nmap <leader>gr :ALEFindReferences<CR>
+nmap <leader>n :lnext<CR>
+nmap <leader>N :lprev<CR>
 autocmd Filetype python nmap K :ALEHover<CR>
 
 " autoclose preview window (the place the help text is shown when
