@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+uv run \
+    --isolated \
+    --with pylint \
+    pylint "$@"

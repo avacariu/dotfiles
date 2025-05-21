@@ -11,14 +11,25 @@ call pathogen#helptags()
 
 let g:ale_python_auto_uv = 1
 let g:ale_linters = {'python': ['jedils', 'pylint']}
+let g:ale_fixers = {'python': ['isort']}
 let g:ale_floating_preview = 1
 let g:ale_virtualtext_cursor = 0
 let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
+
+" Wrappers are used because I don't want to have to specify dependencies like
+" jedils and isort in the pyproject.toml, but I still want to ensure that the
+" pyproject.toml (and .python-version) is considered when deciding the Python
+" version. This is important when writing code that might be a syntax error in
+" older versions of Python.
+let g:ale_python_jedils_executable = '/home/av/.local/bin/ale/ale-jedils'
+let g:ale_python_pylint_executable = '/home/av/.local/bin/ale/ale-pylint'
+let g:ale_python_isort_executable = '/home/av/.local/bin/ale/ale-isort'
 
 nmap <leader>gd :ALEGoToDefinition<CR>
 nmap <leader>gr :ALEFindReferences<CR>
 nmap <leader>n :lnext<CR>
 nmap <leader>N :lprev<CR>
+nmap <leader>is :ALEFix isort<CR>
 autocmd Filetype python nmap K :ALEHover<CR>
 
 " autoclose preview window (the place the help text is shown when
@@ -27,6 +38,7 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='wombat'
