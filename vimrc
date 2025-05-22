@@ -9,7 +9,6 @@ runtime pack/plugin-bundle/start/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-let g:ale_python_auto_uv = 1
 let g:ale_linters = {'python': ['jedils', 'pylint']}
 let g:ale_fixers = {'python': ['isort']}
 let g:ale_floating_preview = 1
@@ -21,9 +20,17 @@ let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 " pyproject.toml (and .python-version) is considered when deciding the Python
 " version. This is important when writing code that might be a syntax error in
 " older versions of Python.
-let g:ale_python_jedils_executable = '/home/av/.local/bin/ale/ale-jedils'
-let g:ale_python_pylint_executable = '/home/av/.local/bin/ale/ale-pylint'
-let g:ale_python_isort_executable = '/home/av/.local/bin/ale/ale-isort'
+" NOTE: you can 'let g:ale_use_global_executables = 1' in general, but I don't
+" know if I want that yet.
+" NOTE: It's important not to set g:ale_python_auto_uv = 1, because that
+" overrides these executables.
+let g:ale_python_auto_uv = 0
+let g:ale_python_jedils_executable = $HOME . '/.local/bin/ale/ale-jedils'
+let g:ale_python_jedils_use_global = 1
+let g:ale_python_pylint_executable = $HOME . '/.local/bin/ale/ale-pylint'
+let g:ale_python_pylint_use_global = 1
+let g:ale_python_isort_executable = $HOME . '/.local/bin/ale/ale-isort'
+let g:ale_python_isort_use_global = 1
 
 nmap <leader>gd :ALEGoToDefinition<CR>
 nmap <leader>gr :ALEFindReferences<CR>
