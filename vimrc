@@ -187,9 +187,11 @@ nnoremap \s a<C-X><C-S>
 
 " Use mouse for scrolling
 set mouse=a
-nmap <LeftMouse> <nop>
-imap <LeftMouse> <nop>
-vmap <LeftMouse> <nop>
+
+" This is required because the default ttymouse is xterm when running under
+" tmux. We need to override this so that using the mouse to drag windows works
+" under tmux.
+set ttymouse=sgr
 
 " Center the search result
 map N Nzz
