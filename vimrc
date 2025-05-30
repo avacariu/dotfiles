@@ -188,6 +188,12 @@ nnoremap \s a<C-X><C-S>
 " Use mouse for scrolling
 set mouse=a
 
+" NOTE: It's important to use the tmux-focus-events.vim plugin for this because
+" even though Vim supports these events by default they seem to only work if
+" you set term=xterm which I don't want to do (it breaks colors).
+autocmd FocusGained * set mouse+=a
+autocmd FocusLost * set mouse=
+
 " This is required because the default ttymouse is xterm when running under
 " tmux. We need to override this so that using the mouse to drag windows works
 " under tmux.

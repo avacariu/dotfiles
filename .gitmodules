@@ -201,3 +201,6 @@
 [submodule "vim/pack/plugin-bundle/start/vim-python-pep8-indent"]
 	path = vim/pack/plugin-bundle/start/vim-python-pep8-indent
 	url = https://github.com/Vimjas/vim-python-pep8-indent.git
+[submodule "vim/pack/plugin-bundle/start/vim-tmux-focus-events"]
+	path = vim/pack/plugin-bundle/start/vim-tmux-focus-events
+	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
