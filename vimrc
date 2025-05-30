@@ -228,9 +228,12 @@ vnoremap > >gv
 " }}}
 " Search {{{
 set incsearch
+set hlsearch
+
+" These say "ignore case unless something is capitalized. Use \c or \C to
+" override this.
 set ignorecase
 set smartcase
-set hlsearch
 " }}}
 " Syntax & Indent {{{
 syntax enable
