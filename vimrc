@@ -185,6 +185,10 @@ endfunction
 " use \s for spellcheck
 nnoremap \s a<C-X><C-S>
 
+" credit https://n8henrie.com/2021/05/copy-and-paste-between-vim-selection-and-tmux/
+vnoremap <leader>tc y<cr>:call system("tmux load-buffer -", @0)<cr>gv
+nnoremap <leader>tp :let @0 = system("tmux save-buffer -")<cr>"0p<cr>g;
+
 " Use mouse for scrolling
 set mouse=a
 
@@ -225,6 +229,8 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " Keep selected text when changing indentation
 vnoremap < <gv
 vnoremap > >gv
+
+set smoothscroll
 " }}}
 " Search {{{
 set incsearch
