@@ -59,13 +59,13 @@ let g:ctrlp_user_command = {
             \ 'fallback': 'find %s -type f'
         \ }
 
-" This searches Files, Buffers and MRU files at the same time. For whatever
-" reason, regular CtrlP mode will miss a lot of files in the root directory
-" (e.g. Makefiles). Searching MRU files seems to work a lot better than regular
-" file searching.
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'r'
 
-let g:tex_flavor='latex'
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>
+
+let g:tex_flavor = 'latex'
 
 let g:netrw_altfile = 1
 
