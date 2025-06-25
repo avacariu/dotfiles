@@ -47,3 +47,7 @@
 	fsckobjects = true
 [receive]
 	fsckobjects = true
+
+[bash]
+    showDirtyState=true
+    showUntrackedFiles=true
