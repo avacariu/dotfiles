@@ -2,7 +2,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+set fish_greeting
 set -g fish_key_bindings fish_vi_key_bindings
+
+bind --mode insert \cR history-pager
 
 function fish_mode_prompt; end
 
