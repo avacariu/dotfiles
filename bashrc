@@ -10,3 +10,7 @@ done
 
 source ~/.local/bin/dotfiles/bashmarks/bashmarks.sh
 source ~/.bashrc_local 2>/dev/null
+
+if [[ -f /usr/bin/fish ]]; then
+    exec fish
+fi
