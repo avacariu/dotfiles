@@ -49,5 +49,5 @@
 	fsckobjects = true
 
 [bash]
-    showDirtyState=true
-    showUntrackedFiles=true
+    showDirtyState = true
+    showUntrackedFiles = true
