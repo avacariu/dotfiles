@@ -51,3 +51,6 @@
 [bash]
     showDirtyState = true
     showUntrackedFiles = true
+
+[include]
+    path = ~/.gitconfig_local
