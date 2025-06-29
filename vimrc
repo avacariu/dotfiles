@@ -41,7 +41,7 @@ autocmd Filetype python nmap K :ALEHover<CR>
 
 " autoclose preview window (the place the help text is shown when
 " autocompleting python methods)
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+" autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
