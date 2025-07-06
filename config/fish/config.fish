@@ -7,6 +7,7 @@ set -g fish_key_bindings fish_vi_key_bindings
 
 bind --mode insert \cR history-pager
 abbr --add ris tput reset
+abbr --add sl ls
 
 function last_history_item; echo $history[1]; end
 abbr --add !! --position anywhere --function last_history_item
