@@ -26,6 +26,9 @@ function fish_prompt
             echo -n '[I] '
         case replace_one
             set_color --bold green
+            echo -n '[r] '
+        case replace
+            set_color --bold green
             echo -n '[R] '
         case visual
             set_color --bold brmagenta
