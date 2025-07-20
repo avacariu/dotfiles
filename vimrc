@@ -267,7 +267,7 @@ vmap <unique> <left>  <Plug>SchleppLeft
 vmap <unique> <right> <Plug>SchleppRight
 
 " `gp' will select pasted text
-nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+nnoremap <expr> <leader>gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " Keep selected text when changing indentation
 vnoremap < <gv
