@@ -71,6 +71,10 @@ function fish_prompt
     set_color normal
 end
 
+# we're adding it here because if you add universal variables they're resolved
+# to absolute paths and those can differ between machines
+fish_add_path -g ~/.local/bin ~/.cargo/bin
+
 if type -q zoxide
     zoxide init fish | source
 end
