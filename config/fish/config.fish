@@ -15,6 +15,7 @@ abbr --add !! --position anywhere --function last_history_item
 function fish_mode_prompt; end
 
 function fish_prompt
+    set -l display_status $status
     echo
 
     switch $fish_bind_mode
@@ -58,8 +59,18 @@ function fish_prompt
     # Fish has built-in git prompt support
     set_color --bold brgreen
     echo -n (fish_git_prompt)
+
+    if [ $display_status -ne 0 ]
+        set_color --bold red
+        echo -n " [$display_status]"
+    end
+
     echo
     set_color --bold magenta
     echo -n '$ '
     set_color normal
+end
+
+if type -q zoxide
+    zoxide init fish | source
 end
