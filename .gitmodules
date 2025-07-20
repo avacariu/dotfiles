@@ -78,11 +78,6 @@
 	url = https://github.com/cespare/vim-toml.git
 	ignore = dirty
 	branch = master
-[submodule "vim/bundle/Smooth-Scroll"]
-	path = vim/pack/plugin-bundle/start/Smooth-Scroll
-	url = https://github.com/vim-scripts/Smooth-Scroll.git
-	ignore = dirty
-	branch = master
 [submodule "vim/bundle/vim-jinja"]
 	path = vim/pack/plugin-bundle/start/vim-jinja
 	url = https://github.com/avacariu/vim-jinja.git
