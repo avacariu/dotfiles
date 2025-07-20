@@ -205,10 +205,6 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " edit all buffers using current files (reload)
 map <Leader>ge :windo e!<CR>
 
-" switch buffers with Tab and S-Tab
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
-
 nnoremap <Leader>q :q<CR>
 
 nnoremap <leader>w :w<CR>
