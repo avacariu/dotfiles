@@ -39,6 +39,10 @@ nmap <leader>N :lprev<CR>
 nmap <leader>is :ALEFix isort<CR>
 autocmd Filetype python nmap K :ALEHover<CR>
 
+" NOTE: <S-Down> and <S-Up> are netrw bindings
+nnoremap <silent> <S-Left> :bprevious<CR>
+nnoremap <silent> <S-Right> :bnext<CR>
+
 " autoclose preview window (the place the help text is shown when
 " autocompleting python methods)
 " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
