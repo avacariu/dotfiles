@@ -66,6 +66,10 @@ nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
 
+let g:bufExplorerDisableDefaultKeyMapping = 1
+
+nnoremap <silent> <leader>be :ToggleBufExplorer<CR>
+
 let g:tex_flavor = 'latex'
 
 let g:netrw_altfile = 1

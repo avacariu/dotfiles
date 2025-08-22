@@ -199,3 +199,6 @@
 [submodule "vim/pack/plugin-bundle/start/vim-tmux-focus-events"]
 	path = vim/pack/plugin-bundle/start/vim-tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
+[submodule "vim/pack/plugin-bundle/start/bufexplorer"]
+	path = vim/pack/plugin-bundle/start/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
