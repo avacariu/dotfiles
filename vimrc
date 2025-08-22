@@ -32,10 +32,10 @@ let g:ale_python_pylint_use_global = 1
 let g:ale_python_isort_executable = $HOME . '/.local/bin/ale/ale-isort'
 let g:ale_python_isort_use_global = 1
 
-nmap <leader>gd :ALEGoToDefinition<CR>
+nmap gd :ALEGoToDefinition<CR>
 nmap <leader>gr :ALEFindReferences<CR>
-nmap <leader>n :lnext<CR>
-nmap <leader>N :lprev<CR>
+nmap <leader>n :ALENextWrap<CR>
+nmap <leader>N :ALEPreviousWrap<CR>
 nmap <leader>is :ALEFix isort<CR>
 autocmd Filetype python nmap K :ALEHover<CR>
 
