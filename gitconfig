@@ -8,6 +8,7 @@
 [core]
     editor = vim -c 'startinsert'
     excludesfile = ~/.gitignore
+    longpaths = true
 [merge]
     conflictstyle = zdiff3
 [rebase]
