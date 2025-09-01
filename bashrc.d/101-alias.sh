@@ -1,4 +1,3 @@
-# vim: let b:is_bash = 1
 # some more ls aliases
 alias ll='ls -lah'
 alias la='ls -a'
